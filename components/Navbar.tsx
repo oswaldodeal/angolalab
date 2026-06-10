@@ -13,13 +13,22 @@ export default function Navbar() {
           alignItems: "center",
         }}
       >
-        <Link href="/" style={{ textDecoration: "none", color: "#0f172a", fontWeight: "bold", fontSize: "1.4rem" }}>
+        <Link
+          href="/"
+          style={{
+            textDecoration: "none",
+            color: "#0f172a",
+            fontWeight: "bold",
+            fontSize: "1.4rem",
+          }}
+        >
           AngolaLab
         </Link>
 
         <div style={{ display: "flex", gap: "1.2rem" }}>
           <Link href="/" style={linkStyle}>Home</Link>
-          <Link href="/tourism" style={linkStyle}>Tourism</Link>
+          <Link href="/tourism" style={linkStyle}>Tourism Intelligence</Link>
+          <Link href="/trading" style={linkStyle}>Trading Intelligence</Link>
           <Link href="/about" style={linkStyle}>About</Link>
         </div>
       </nav>
