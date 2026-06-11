@@ -6,19 +6,13 @@ import PageContainer from "@/components/PageContainer";
 export default function TradingPage() {
   return (
     <>
-      {/* Navigation Bar */}
       <Navbar />
 
-      {/* Main Content */}
       <main>
-        <PageContainer
-          style={{
-            maxWidth: "1200px",
-            margin: "0 auto",
-            padding: "2rem",
-            fontFamily: "Arial, sans-serif",
-          }}
-        >
+        <PageContainer>
+        
+          
+        
           {/* Page Header */}
           <p style={{ color: "#2563eb", fontWeight: "bold" }}>
             Trading Intelligence
@@ -97,10 +91,9 @@ export default function TradingPage() {
               />
             </div>
           </section>
-        </PageContainer>
+         </PageContainer>
       </main>
 
-      {/* Footer */}
       <Footer />
     </>
   );
