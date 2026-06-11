@@ -29,6 +29,7 @@ export default function Navbar() {
           <Link href="/" style={linkStyle}>Home</Link>
           <Link href="/tourism" style={linkStyle}>Tourism Intelligence</Link>
           <Link href="/trading" style={linkStyle}>Trading Intelligence</Link>
+          <Link href="/framework" style={linkStyle}>Framework</Link>
           <Link href="/about" style={linkStyle}>About</Link>
         </div>
       </nav>
