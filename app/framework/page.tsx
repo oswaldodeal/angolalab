@@ -3,33 +3,24 @@ import Footer from "@/components/Footer";
 import FrameworkCard from "@/components/FrameworkCard";
 import IntelligenceCard from "@/components/IntelligenceCard";
 
+import PageContainer from "@/components/PageContainer";
+import PageHeader from "@/components/PageHeader";
+
 export default function FrameworkPage() {
   return (
     <>
       <Navbar />
 
-      <main
-        style={{
-          maxWidth: "1200px",
-          margin: "0 auto",
-          padding: "2rem",
-          fontFamily: "Arial, sans-serif",
-        }}
-      >
-        <p style={{ color: "#2563eb", fontWeight: "bold" }}>
-          AngolaLab Intelligence Framework v1
-        </p>
-
-        <h1 style={{ color: "#0f172a" }}>
-          From Data to Intelligence
-        </h1>
-
-        <p style={{ color: "#475569", maxWidth: "800px", lineHeight: 1.8 }}>
-          AngolaLab uses systems thinking to transform data, observations and
-          evidence into structured intelligence. The objective is not only to
-          show what is happening, but to understand why it is happening, how
-          different systems interact, and what decisions can be supported.
-        </p>
+    <main>
+  <PageContainer>
+      
+        
+        <PageHeader
+  category="AngolaLab Intelligence Framework v1"
+  title="From Data to Intelligence"
+  description="AngolaLab uses systems thinking to transform data, observations and evidence into structured intelligence. The objective is not only to show what is happening, but to understand why it is happening, how different systems interact, and what decisions can be supported."
+/>
+  
 
         <section style={{ marginTop: "3rem" }}>
           <h2 style={{ color: "#0f172a" }}>
@@ -133,7 +124,8 @@ export default function FrameworkPage() {
             behaviour.
           </p>
         </section>
-      </main>
+     </PageContainer>
+</main>
 
       <Footer />
     </>

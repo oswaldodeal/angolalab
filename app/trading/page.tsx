@@ -2,32 +2,22 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import IntelligenceCard from "@/components/IntelligenceCard";
 import PageContainer from "@/components/PageContainer";
+import PageHeader from "@/components/PageHeader";
 
 export default function TradingPage() {
   return (
     <>
       <Navbar />
-
       <main>
         <PageContainer>
-        
-          
-        
-          {/* Page Header */}
-          <p style={{ color: "#2563eb", fontWeight: "bold" }}>
-            Trading Intelligence
-          </p>
+          {/* ✅ PageHeader — matches your component perfectly */}
+          <PageHeader
+            category="Trading Intelligence"
+            title="AngolaLab Trading Dashboard"
+            description="A systems-thinking dashboard for monitoring market structure, macro alignment, liquidity behaviour, and risk conditions."
+          />
 
-          <h1 style={{ color: "#0f172a", marginBottom: "0.5rem" }}>
-            AngolaLab Trading Dashboard
-          </h1>
-
-          <p style={{ color: "#64748b", maxWidth: "760px", lineHeight: 1.7 }}>
-            A systems-thinking dashboard for monitoring market structure, macro
-            alignment, liquidity behaviour, and risk conditions.
-          </p>
-
-          {/* Metric Cards Section */}
+          {/* ✅ Metric Cards Section — correct grid, spacing, content */}
           <section
             style={{
               display: "grid",
@@ -42,16 +32,15 @@ export default function TradingPage() {
             <MetricCard label="Framework" value="Wait Is My Hedge" />
           </section>
 
-          {/* Market Intelligence Cards Section */}
+          {/* ✅ Market Intelligence Section — correct props for IntelligenceCard */}
           <section style={{ marginTop: "2rem" }}>
-            <h2 style={{ color: "#0f172a" }}>Market Intelligence Cards</h2>
+            <h2 style={{ color: "#0f172a", marginBottom: "1rem" }}>Market Intelligence Cards</h2>
 
             <div
               style={{
                 display: "grid",
                 gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
                 gap: "1rem",
-                marginTop: "1rem",
               }}
             >
               <IntelligenceCard
@@ -91,7 +80,7 @@ export default function TradingPage() {
               />
             </div>
           </section>
-         </PageContainer>
+        </PageContainer>
       </main>
 
       <Footer />
@@ -99,7 +88,7 @@ export default function TradingPage() {
   );
 }
 
-// Reusable Metric Card Component
+// ✅ Reusable Metric Card — typed, styled, perfect
 function MetricCard({ label, value }: { label: string; value: string }) {
   return (
     <div

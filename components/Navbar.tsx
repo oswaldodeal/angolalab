@@ -2,12 +2,21 @@ import Link from "next/link";
 
 export default function Navbar() {
   return (
-    <header style={{ borderBottom: "1px solid #e5e7eb", background: "#ffffff" }}>
+    <header
+      style={{
+        borderBottom: "1px solid #e5e7eb",
+        background: "#ffffff",
+        position: "sticky",
+        top: 0,
+        zIndex: 1000,
+      }}
+    >
       <nav
         style={{
           maxWidth: "1200px",
           margin: "0 auto",
           padding: "1rem 2rem",
+          boxSizing: "border-box",
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",

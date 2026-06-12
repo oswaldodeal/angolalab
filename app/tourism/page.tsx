@@ -10,6 +10,9 @@ import ReviewFormPlaceholder from "@/components/ReviewFormPlaceholder";
 import IntelligenceCard from "@/components/IntelligenceCard";
 import MarketPlaceholder from "@/components/MarketPlaceholder";
 
+import PageContainer from "@/components/PageContainer";
+import PageHeader from "@/components/PageHeader";
+
 // Define data type
 type TourismRecord = {
   id: number;
@@ -36,27 +39,16 @@ export default function TourismPage() {
     <>
       <Navbar />
 
-      <main
-        style={{
-          maxWidth: "1200px",
-          margin: "0 auto",
-          padding: "2rem",
-          fontFamily: "Arial, sans-serif",
-        }}
-      >
+      <main>
+  <PageContainer>
+      
         {/* Page Header */}
-        <p style={{ color: "#2563eb", fontWeight: "bold", margin: "0 0 0.5rem 0" }}>
-          Tourism Intelligence
-        </p>
-
-        <h1 style={{ color: "#0f172a", margin: "0 0 0.5rem 0" }}>
-          AngolaLab Tourism Dashboard
-        </h1>
-
-        <p style={{ color: "#64748b", maxWidth: "700px", lineHeight: "1.7", margin: "0 0 2rem 0" }}>
-          Monitoring tourism indicators, visitor flows and regional performance
-          through a systems-thinking intelligence lens.
-        </p>
+      
+      <PageHeader
+  category="Tourism Intelligence"
+  title="AngolaLab Tourism Dashboard"
+  description="Monitoring tourism indicators, visitor flows and regional performance through a systems-thinking intelligence lens."
+/>
 
         {/* Summary & Observations */}
         <SummaryCards
@@ -212,7 +204,8 @@ export default function TourismPage() {
         {/* Tourism Data Table */}
         <h2 style={{ color: "#0f172a", margin: "2rem 0 1rem 0" }}>Tourism Records</h2>
         <TourismTable data={data} />
-      </main>
+        </PageContainer>
+</main>
 
       <Footer />
     </>
