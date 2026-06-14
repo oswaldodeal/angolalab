@@ -9,7 +9,7 @@ import QualityScoreCard from "@/components/QualityScoreCard";
 import ReviewFormPlaceholder from "@/components/ReviewFormPlaceholder";
 import IntelligenceCard from "@/components/IntelligenceCard";
 import MarketPlaceholder from "@/components/MarketPlaceholder";
-
+import VerifiedProfileCard from "@/components/VerifiedProfileCard";
 import PageContainer from "@/components/PageContainer";
 import PageHeader from "@/components/PageHeader";
 
@@ -64,42 +64,49 @@ export default function TourismPage() {
           provinceCount={provinceCount}
         />
 
-        <section style={{ marginTop: "2rem" }}>
-  <h2 style={{ color: "#0f172a" }}>Tourism Quality Scorecards</h2>
+<section style={{ marginTop: "2rem" }}>
+  <h2 style={{ color: "#0f172a" }}>Verified Tourism Profiles</h2>
 
   <div
     style={{
       display: "grid",
       gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
       gap: "1rem",
-      marginBottom: "2rem",
+      marginTop: "1rem",
     }}
   >
-    <QualityScoreCard
+    <VerifiedProfileCard
       name="Hotel Tropico"
       type="Hotel"
-      cleanliness={85}
-      food={80}
-      location={95}
-      hygiene={88}
-      service={82}
-      safety={90}
-      valueForMoney={78}
+      location="Luanda"
+      score={85}
+      classification="Very Good"
+      lastVerified="June 2026"
+      status="Verified"
+      observation="Hotel Tropico performs strongly in cleanliness, safety and location."
+      assessment="Current quality indicators exceed the tourism sample average."
+      recommendation="Suitable candidate for AngolaLab Verified Profile status."
+      confidence="High"
     />
 
-    <QualityScoreCard
+    <VerifiedProfileCard
       name="Luanda Bay Restaurant"
       type="Restaurant"
-      cleanliness={78}
-      food={84}
-      location={88}
-      hygiene={80}
-      service={75}
-      safety={82}
-      valueForMoney={70}
+      location="Luanda"
+      score={78}
+      classification="Good"
+      lastVerified="Pending verification"
+      status="Unverified"
+      observation="Limited information is currently available for independent verification."
+      assessment="Initial indicators suggest acceptable service quality."
+      recommendation="Further review and verification required."
+      confidence="Medium"
     />
   </div>
 </section>
+
+
+
 
 <ReviewFormPlaceholder />
 
