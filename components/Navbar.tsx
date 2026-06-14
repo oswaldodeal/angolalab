@@ -15,9 +15,11 @@ export default function Navbar() {
         style={{
           maxWidth: "1200px",
           margin: "0 auto",
-          padding: "1rem 2rem",
+          padding: "1rem",
           boxSizing: "border-box",
           display: "flex",
+          flexWrap: "wrap",
+          gap: "1rem",
           justifyContent: "space-between",
           alignItems: "center",
         }}
@@ -34,10 +36,17 @@ export default function Navbar() {
           AngolaLab
         </Link>
 
-        <div style={{ display: "flex", gap: "1.2rem" }}>
+        <div
+          style={{
+            display: "flex",
+            flexWrap: "wrap",
+            gap: "0.8rem",
+            alignItems: "center",
+          }}
+        >
           <Link href="/" style={linkStyle}>Home</Link>
-          <Link href="/tourism" style={linkStyle}>Tourism Intelligence</Link>
-          <Link href="/trading" style={linkStyle}>Trading Intelligence</Link>
+          <Link href="/tourism" style={linkStyle}>Tourism</Link>
+          <Link href="/trading" style={linkStyle}>Trading</Link>
           <Link href="/framework" style={linkStyle}>Framework</Link>
           <Link href="/about" style={linkStyle}>About</Link>
         </div>
