@@ -8,7 +8,7 @@ export default function PageContainer({
       style={{
         maxWidth: "1200px",
         margin: "0 auto",
-        padding: "2rem",
+        padding: "1rem",
         fontFamily: "Arial, sans-serif",
       }}
     >
