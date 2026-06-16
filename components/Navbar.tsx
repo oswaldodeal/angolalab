@@ -48,6 +48,8 @@ export default function Navbar() {
           <Link href="/tourism" style={linkStyle}>Tourism</Link>
           <Link href="/aviation" style={linkStyle}>Aviation</Link>
           <Link href="/trading" style={linkStyle}>Trading</Link>
+          <Link href="/bodiva" style={linkStyle}>BODIVA</Link>
+          <Link href="/business" style={linkStyle}>Business</Link>
           <Link href="/framework" style={linkStyle}>Framework</Link>
           <Link href="/about" style={linkStyle}>About</Link>
           <Link href="/search" style={linkStyle}>Search</Link>
