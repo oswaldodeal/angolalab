@@ -45,6 +45,7 @@ export default function Navbar() {
           }}
         >
           <Link href="/" style={linkStyle}>Home</Link>
+          <Link href="/journal" style={linkStyle}>Journal</Link>
           <Link href="/tourism" style={linkStyle}>Tourism</Link>
           <Link href="/aviation" style={linkStyle}>Aviation</Link>
           <Link href="/trading" style={linkStyle}>Trading</Link>
