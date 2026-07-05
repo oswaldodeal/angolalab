@@ -44,6 +44,7 @@ export default function Navbar() {
             alignItems: "center",
           }}
         >
+          <Link href="/development">Development</Link>
           <Link href="/" style={linkStyle}>Home</Link>
           <Link href="/journal" style={linkStyle}>Journal</Link>
           <Link href="/tourism" style={linkStyle}>Tourism</Link>
