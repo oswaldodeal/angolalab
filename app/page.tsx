@@ -4,7 +4,13 @@ import Footer from "@/components/Footer";
 import PageContainer from "@/components/PageContainer";
 import PageHeader from "@/components/PageHeader";
 
+import { redirect } from "next/navigation";
+
 export default function HomePage() {
+  redirect("/development");
+}
+
+{/*export default function HomePage() {
   return (
     <>
       <Navbar />
@@ -158,4 +164,4 @@ function HomeCard({
       </div>
     </Link>
   );
-}
+*/}
