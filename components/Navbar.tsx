@@ -1,5 +1,6 @@
 import Link from "next/link";
 
+
 export default function Navbar() {
   return (
     <header
@@ -44,7 +45,10 @@ export default function Navbar() {
             alignItems: "center",
           }}
         >
-          <Link href="/development">Development</Link>
+          <Link href="/development" style={linkStyle}>Development</Link>
+           <Link href="/intelligence" style={linkStyle}>Intelligence</Link>
+           <Link href="/" style={linkStyle}>Home</Link>
+         
          {/*
 =============================================
 ANGOLALAB NAVIGATION MENU - TEMPORARILY HIDDEN

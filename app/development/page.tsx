@@ -1,105 +1,150 @@
+import Link from "next/link";
+import styles from "./development.module.css";
+
 export default function DevelopmentPage() {
   const progress = [
     {
       date: "01 June 2026",
-      title: "Git Foundation Configured",
+      title: "Development Infrastructure Established",
       status: "Completed",
       description:
-        "Configured Git identity and established the foundation for version control and future GitHub integration.",
+        "Established the foundational development environment to support the long-term growth and maintenance of the AngolaLab platform.",
     },
     {
       date: "02 June 2026",
-      title: "Portable Development System Mapped",
+      title: "Development Workflow Standardised",
       status: "Completed",
       description:
-        "Designed the AngolaLab portable toolkit approach to work around restricted university-managed computers.",
+        "Established a consistent development workflow to support reliable platform development and long-term project continuity.",
     },
+    
     {
-      date: "04 July 2026",
-      title: "AEIS Environment System Defined",
-      status: "In Progress",
-      description:
-        "Outlined the environmental intelligence layer for tourism safety, weather risk, and visitor protection reports.",
-    },
+  date: "14 July 2026",
+  reference: "DD-140726-01",
+  title: "Provincial Economic Intelligence Architecture",
+  status: "Completed",
+  description:
+    "Established Provincial Economic Intelligence as the geographical foundation of AngolaLab. Future intelligence areas including business, tourism, aviation, finance, property, education and opportunity intelligence will be organised through this framework.",
+},
+
+      
+   {
+  date: "14 July 2026",
+  reference: "DD-140726-02",
+  title: "Multilingual Platform Foundation",
+  status: "Completed",
+  description:
+    "Integrated Portuguese and Dutch into the AngolaLab platform architecture, establishing the foundation for multilingual education while preserving a single institutional methodology across all language versions.",
+},
   ];
 
   return (
-    <main className="min-h-screen bg-white text-black px-6 py-12">
-      <section className="max-w-5xl mx-auto">
-        <p className="text-sm uppercase tracking-wide text-gray-500">
-          AngolaLab Build Log
-        </p>
+    <main className={styles.page}>
+      <section className={styles.container}>
+        {/* Hero */}
 
-        <h1 className="text-4xl font-bold mt-3">
-          Development Dashboard
-        </h1>
+        <header className={styles.hero}>
 
-        <p className="mt-4 text-lg text-gray-700 max-w-3xl">
-          This page records the ongoing development of AngolaLab, including
-          platform progress, AEIS research systems, trading intelligence,
-          environmental intelligence, and public education tools.
-        </p>
 
-        <div className="mt-10 grid gap-6 md:grid-cols-3">
-          <div className="border rounded-2xl p-6">
-            <p className="text-sm text-gray-500">Current Phase</p>
-            <h2 className="text-2xl font-semibold mt-2">
-              Foundation Build
-            </h2>
+  <p className={styles.category}>AngolaLab Build Log</p>
+
+          <h1 className={styles.title}>Development Dashboard</h1>
+
+          <p className={styles.description}>
+            This page records the continuous development of AngolaLab and the
+            Angola Economic Intelligence System (AEIS). Every significant
+            milestone becomes part of the permanent public history of the
+            institution.
+          </p>
+          {/*Language links*/}
+
+          <nav
+  className={styles.languageLinks}
+  aria-label="Language versions"
+>
+  <Link href="/pt" className={styles.languageLink}>
+    Português
+  </Link>
+
+  <Link href="/nl" className={styles.languageLink}>
+    Nederlands
+  </Link>
+</nav>
+</header>
+
+<div className={styles.heroDivider}></div>
+        
+
+        {/* Summary */}
+        <section className={styles.summaryGrid}>
+          <div className={styles.summaryCard}>
+            <p className={styles.summaryLabel}>Current Phase</p>
+            <h2 className={styles.summaryValue}>Foundation Phase</h2>
           </div>
 
-          <div className="border rounded-2xl p-6">
-            <p className="text-sm text-gray-500">Platform Status</p>
-            <h2 className="text-2xl font-semibold mt-2">
-              Active Development
-            </h2>
+          <div className={styles.summaryCard}>
+            <p className={styles.summaryLabel}>Platform Status</p>
+            <h2 className={styles.summaryValue}>Active Development</h2>
           </div>
 
-          <div className="border rounded-2xl p-6">
-            <p className="text-sm text-gray-500">Core Method</p>
-            <h2 className="text-2xl font-semibold mt-2">
-              Systems Thinking
+          <div className={styles.summaryCard}>
+            <p className={styles.summaryLabel}>Core Method</p>
+            <h2 className={styles.summaryValue}>
+              AEIS Intelligence Methodology
             </h2>
           </div>
-        </div>
+        </section>
 
-        <section className="mt-14">
-          <h2 className="text-2xl font-bold">Latest Progress</h2>
+        {/* Latest Progress */}
+        <section className={styles.section}>
+          <h2 className={styles.sectionTitle}>Latest Progress</h2>
 
-          <div className="mt-6 space-y-5">
+          <div>
             {progress.map((item) => (
-              <article
-                key={item.title}
-                className="border rounded-2xl p-6"
-              >
-                <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2">
-                  <h3 className="text-xl font-semibold">{item.title}</h3>
-                  <span className="text-sm text-gray-500">{item.date}</span>
+              <article key={item.title} className={styles.logCard}>
+                <div className={styles.logHeader}>
+                  <h3 className={styles.logTitle}>{item.title}</h3>
+                  <span className={styles.date}>{item.date}</span>
                 </div>
+{item.reference && (
+  <p className={styles.reference}>
+    Reference: {item.reference}
+  </p>
+)}
 
-                <p className="mt-2 text-sm font-medium">
-                  Status: {item.status}
-                </p>
+ <span
+  className={`${styles.status} ${
+    item.status === "Completed"
+      ? styles.completed
+      : styles.progress
+  }`}
+>
+  {item.status === "Completed" ? "🟡 " : "🔴 "}
+  {item.status}
+</span>
 
-                <p className="mt-3 text-gray-700">
-                  {item.description}
-                </p>
+                <p className={styles.descriptionText}>{item.description}</p>
               </article>
             ))}
           </div>
         </section>
 
-        <section className="mt-14">
-          <h2 className="text-2xl font-bold">Next Build Priorities</h2>
+        {/* Priorities */}
+        <section className={styles.section}>
+          <h2 className={styles.sectionTitle}>Next Build Priorities</h2>
 
-          <ol className="mt-5 list-decimal list-inside space-y-2 text-gray-700">
-            <li>Development dashboard</li>
-            <li>Weekly intelligence briefing page</li>
-            <li>Trading dashboard v1</li>
-            <li>AEIS report archive</li>
-            <li>Tourism safety intelligence page</li>
+          <ol className={styles.priorityList}>
+            <li>Provincial Economic Intelligence</li>
+            <li>AngolaLab Journal</li>
+            <li>Opportunity Intelligence</li>
+            <li>Verified Business Framework</li>
+            <li>AEIS Academy</li>
           </ol>
         </section>
+
+        <p className={styles.footerNote}>
+          AngolaLab is being built, documented and refined — brick by brick.
+        </p>
       </section>
     </main>
   );
