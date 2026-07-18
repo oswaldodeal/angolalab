@@ -45,16 +45,10 @@ export default function Navbar() {
             alignItems: "center",
           }}
         >
-          <Link href="/development" style={linkStyle}>Development</Link>
-           <Link href="/intelligence" style={linkStyle}>Intelligence</Link>
-           <Link href="/" style={linkStyle}>Home</Link>
+          
          
-         {/*
-=============================================
-ANGOLALAB NAVIGATION MENU - TEMPORARILY HIDDEN
-Section: Main site navigation links
-Scope: Core pages, sectors, framework and info
-=============================================
+<Link href="/development" style={linkStyle}>Development</Link>
+<Link href="/intelligence" style={linkStyle}>Intelligence</Link>
 <Link href="/" style={linkStyle}>Home</Link>
 <Link href="/journal" style={linkStyle}>Journal</Link>
 <Link href="/tourism" style={linkStyle}>Tourism</Link>
@@ -65,7 +59,7 @@ Scope: Core pages, sectors, framework and info
 <Link href="/framework" style={linkStyle}>Framework</Link>
 <Link href="/about" style={linkStyle}>About</Link>
 <Link href="/search" style={linkStyle}>Search</Link>
-*/}
+
         </div>
       </nav>
     </header>
