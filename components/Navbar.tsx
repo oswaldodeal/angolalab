@@ -16,16 +16,15 @@ export default function Navbar() {
         zIndex: 1000,
       }}
     >
+  
       <nav
   style={{
-    maxWidth: "1100px",
-    margin: "0 auto",
-    padding: "0.6rem 1rem",
-    boxSizing: "border-box",
-    display: "flex",
-    alignItems: "center",
-    gap: "1rem",
-  }}
+  maxWidth: "1185px",
+  margin: "0 auto",
+  padding: "0.6rem 1rem",
+  display: "flex",
+  alignItems: "center",
+}}
 >
   <Link
     href="/"
@@ -42,12 +41,11 @@ export default function Navbar() {
 
   <div
     style={{
-      display: "flex",
-      alignItems: "center",
-      gap: "0.65rem",
-      marginLeft: "2rem",
-      flexWrap: "wrap",
-    }}
+  display: "flex",
+  alignItems: "center",
+  gap: "1rem",
+  marginLeft: "2rem",
+}}
   >
     <Link href="/home" style={linkStyle}>
       Home
@@ -71,11 +69,11 @@ export default function Navbar() {
   </div>
 
   <div
-    style={{
-      position: "relative",
-      marginLeft: "auto",
-    }}
-  >
+  style={{
+    marginLeft: "auto",
+    position: "relative",
+  }}
+>
     <button
       type="button"
       onClick={() => setLanguageOpen((open) => !open)}

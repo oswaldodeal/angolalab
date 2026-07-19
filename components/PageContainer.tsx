@@ -6,9 +6,10 @@ export default function PageContainer({
   return (
     <div
       style={{
-        maxWidth: "1200px",
+        maxWidth: "1185px",
         margin: "0 auto",
         padding: "1rem",
+        boxSizing: "border-box",
         fontFamily: "Arial, sans-serif",
       }}
     >
