@@ -1,83 +1,324 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import IntelligenceCard from "@/components/IntelligenceCard";
 import PageContainer from "@/components/PageContainer";
-import PageHeader from "@/components/PageHeader";
+import styles from "./trading.module.css";
+
+const laboratoryStatus = {
+  status: "Active",
+  updated: "01 August 2026",
+  version: "Trading Intelligence V1",
+  method: "AEIS Research Methodology",
+};
 
 export default function TradingPage() {
   return (
     <>
       <Navbar />
-      <main>
+
+      <main className={styles.tradingPage}>
         <PageContainer>
-          {/* ✅ PageHeader — matches your component perfectly */}
-          <PageHeader
-            category="Trading Intelligence"
-            title="AngolaLab Trading Dashboard"
-            description="A systems-thinking dashboard for monitoring market structure, macro alignment, liquidity behaviour, and risk conditions."
-          />
+          <section className={styles.laboratory}>
+            {/* Overview */}
+            <header id="overview" className={styles.hero}>
+              <p className={styles.eyebrow}>
+                AngolaLab Trading Laboratory
+              </p>
 
-          {/* ✅ Metric Cards Section — correct grid, spacing, content */}
-          <section
-            style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
-              gap: "1rem",
-              margin: "2rem 0",
-            }}
-          >
-            <MetricCard label="DXY Bias" value="Bullish Above Support" />
-            <MetricCard label="Bond Signal" value="Watching Alignment" />
-            <MetricCard label="Gold State" value="Waiting Confirmation" />
-            <MetricCard label="Framework" value="Wait Is My Hedge" />
-          </section>
+              <h1 className={styles.title}>Trading Intelligence</h1>
 
-          {/* ✅ Market Intelligence Section — correct props for IntelligenceCard */}
-          <section style={{ marginTop: "2rem" }}>
-            <h2 style={{ color: "#0f172a", marginBottom: "1rem" }}>Market Intelligence Cards</h2>
+              <p className={styles.description}>
+                Understanding how capital moves through macroeconomic
+                alignment, market structure and disciplined observation.
+              </p>
 
-            <div
-              style={{
-                display: "grid",
-                gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
-                gap: "1rem",
-              }}
+              <p className={styles.principle}>
+                The mirror has been polished. Now we code the laboratory.
+              </p>
+            </header>
+
+            {/* Laboratory status */}
+            <section
+              className={styles.statusPanel}
+              aria-label="Laboratory status"
             >
-              <IntelligenceCard
-                system="DXY System"
-                title="Dollar Structure"
-                observation="DXY remains above a key support structure in the current sample view."
-                assessment="Dollar strength may continue to influence gold, US30, Bitcoin and emerging-market FX."
-                recommendation="Wait for alignment between DXY, yields and price action before forming directional bias."
-                confidence="Medium"
-              />
+              <div className={styles.statusItem}>
+                <p>Laboratory Status</p>
 
-              <IntelligenceCard
-                system="Bond System"
-                title="Yield Alignment"
-                observation="Bond strength remains an important confirmation layer for market direction."
-                assessment="Without yield confirmation, market moves may be noisy or vulnerable to reversal."
-                recommendation="Monitor US yields and real rates before increasing confidence in gold or equity signals."
-                confidence="Medium"
-              />
+                <h2 className={styles.activeStatus}>
+                  <span className={styles.statusDot} />
+                  {laboratoryStatus.status}
+                </h2>
+              </div>
 
-              <IntelligenceCard
-                system="Gold System"
-                title="XAUUSD Confirmation"
-                observation="Gold requires confirmation from liquidity behaviour, DXY pressure and bond-market context."
-                assessment="Entering before confirmation increases emotional risk and weakens execution quality."
-                recommendation="Wait for price action confirmation near key zones before considering trade execution."
-                confidence="High"
-              />
+              <div className={styles.statusItem}>
+                <p>Last Updated</p>
+                <h2>{laboratoryStatus.updated}</h2>
+              </div>
 
-              <IntelligenceCard
-                system="Market Alignment"
-                title="Wait Is My Hedge"
-                observation="The strongest trading decisions emerge when market structure, macro pressure and liquidity align."
-                assessment="Patience reduces exposure to false moves and protects discipline."
-                recommendation="Avoid forcing trades when the system is not aligned."
-                confidence="High"
-              />
+              <div className={styles.statusItem}>
+                <p>Version</p>
+                <h2>{laboratoryStatus.version}</h2>
+              </div>
+
+              <div className={styles.statusItem}>
+                <p>Research Method</p>
+                <h2>{laboratoryStatus.method}</h2>
+              </div>
+            </section>
+
+            {/* Quick navigation */}
+           <nav
+  className={styles.quickNav}
+  aria-label="Trading Intelligence sections"
+>
+  <details className={styles.sectionMenu}>
+    <summary className={styles.sectionMenuButton}>
+      Sections
+    </summary>
+
+    <div className={styles.sectionMenuDropdown}>
+      <a href="#overview" className={styles.sectionMenuLink}>
+        <span aria-hidden="true">✓</span>
+        <span>Overview</span>
+      </a>
+
+      <a href="#weekly-brief" className={styles.sectionMenuLink}>
+        <span className={styles.menuSpacer} aria-hidden="true" />
+        <span>Weekly Brief</span>
+      </a>
+
+      <a
+        href="#markets-under-observation"
+        className={styles.sectionMenuLink}
+      >
+        <span className={styles.menuSpacer} aria-hidden="true" />
+        <span>Markets Under Observation</span>
+      </a>
+
+      <a
+        href="#research-archive"
+        className={styles.sectionMenuLink}
+      >
+        <span className={styles.menuSpacer} aria-hidden="true" />
+        <span>Research Archive</span>
+      </a>
+    </div>
+  </details>
+</nav>
+
+            <div className={styles.laboratoryContent}>
+              {/* 01 — Market Environment */}
+              <section
+                id="market-environment"
+                className={styles.section}
+              >
+                <div className={styles.sectionHeading}>
+                  <div>
+                    <p className={styles.sectionNumber}>01</p>
+                    <h2>Market Environment</h2>
+                  </div>
+
+                  <p>
+                    The principal drivers and markets currently shaping the
+                    trading environment.
+                  </p>
+                </div>
+
+                <div className={styles.marketGrid}>
+                  <MarketCard
+                    symbol="DXY"
+                    name="USD Dollar Index"
+                    bias="Bullish"
+                    phase="Expansion"
+                    observation="The USD Dollar Index remains structurally supported while price holds above its current decision zone."
+                  />
+
+                  <MarketCard
+                    symbol="US10Y"
+                    name="US 10-Year Treasury Yield"
+                    bias="Bullish"
+                    phase="Expansion"
+                    observation="Higher yields continue to support the cost of capital and strengthen the broader US dollar environment."
+                  />
+
+                  <MarketCard
+                    symbol="XAUUSD"
+                    name="Gold"
+                    bias="Bearish"
+                    phase="Under Observation"
+                    observation="Gold remains vulnerable while the USD Dollar Index and US yields remain aligned bullish."
+                  />
+
+                  <MarketCard
+                    symbol="BTCUSD"
+                    name="Bitcoin"
+                    bias="Neutral"
+                    phase="Transition"
+                    observation="Bitcoin requires clearer daily structure before directional continuation can be confirmed."
+                  />
+                </div>
+              </section>
+
+              {/* 02 — Current Alignment */}
+              <section
+                id="current-alignment"
+                className={styles.section}
+              >
+                <div className={styles.sectionHeading}>
+                  <div>
+                    <p className={styles.sectionNumber}>02</p>
+                    <h2>Current Alignment</h2>
+                  </div>
+
+                  <p>
+                    Alignment is assessed before any directional conclusion is
+                    reached.
+                  </p>
+                </div>
+
+                <article className={styles.alignmentPanel}>
+                  <div className={styles.alignmentStatus}>
+                    <span className={styles.alignmentIndicator} />
+
+                    <div>
+                      <p>Current Assessment</p>
+                      <h3>Partial Macro Alignment</h3>
+                    </div>
+                  </div>
+
+                  <p>
+                    The USD Dollar Index and US yields remain structurally firm.
+                    Gold reflects the opposing side of that relationship, while
+                    Bitcoin remains in transition. Price confirmation is still
+                    required before execution.
+                  </p>
+                </article>
+              </section>
+
+              {/* 03 — Weekly Intelligence Brief */}
+              <section
+                id="weekly-brief"
+                className={styles.section}
+              >
+                <div className={styles.sectionHeading}>
+                  <div>
+                    <p className={styles.sectionNumber}>03</p>
+                    <h2>Weekly Intelligence Brief</h2>
+                  </div>
+
+                  <p>
+                    A structured interpretation of the current market
+                    environment.
+                  </p>
+                </div>
+
+                <div className={styles.briefGrid}>
+                  <BriefCard
+                    title="Observation"
+                    text="The USD Dollar Index and US 10-year yields remain supported, maintaining pressure on assets sensitive to a stronger dollar and a higher cost of capital."
+                  />
+
+                  <BriefCard
+                    title="Structural Relationship"
+                    text="Gold and Bitcoin should not be studied independently. Their behaviour must be evaluated against the direction of the USD Dollar Index, yields and higher-timeframe market structure."
+                  />
+
+                  <BriefCard
+                    title="Risk"
+                    text="Macro alignment does not guarantee immediate price continuation. Markets may remain in absorption, transition or delayed expansion."
+                  />
+
+                  <BriefCard
+                    title="Condition to Monitor"
+                    text="Wait for daily and four-hour structure to confirm the macro environment. No confirmation means no execution."
+                  />
+                </div>
+              </section>
+
+              {/* 04 and 05 */}
+              <div className={styles.lowerGrid}>
+                <section
+                  id="markets-under-observation"
+                  className={styles.section}
+                >
+                  <div className={styles.sectionHeading}>
+                    <div>
+                      <p className={styles.sectionNumber}>04</p>
+                      <h2>Markets Under Observation</h2>
+                    </div>
+                  </div>
+
+                  <div className={styles.observationList}>
+                    <ObservationRow
+                      market="EURUSD"
+                      status="Monitoring"
+                      condition="Bearish continuation requires USD strength and confirmation below the current daily decision zone."
+                    />
+
+                    <ObservationRow
+                      market="USDJPY"
+                      status="Monitoring"
+                      condition="Continuation depends on yield support and confirmation through higher-timeframe price structure."
+                    />
+
+                    <ObservationRow
+                      market="Gold"
+                      status="Watching Expansion"
+                      condition="Selling pressure remains structurally supported while yields and the USD Dollar Index remain firm."
+                    />
+
+                    <ObservationRow
+                      market="BTCUSD"
+                      status="Waiting"
+                      condition="No directional conclusion until daily structure confirms either continuation or transition."
+                    />
+                  </div>
+                </section>
+
+                <section
+                  id="research-archive"
+                  className={styles.section}
+                >
+                  <div className={styles.sectionHeading}>
+                    <div>
+                      <p className={styles.sectionNumber}>05</p>
+                      <h2>Research Archive</h2>
+                    </div>
+                  </div>
+
+                  <div className={styles.archiveList}>
+                    <ArchiveRow
+                      reference="OBS-090726"
+                      title="USD Dollar Index Absorption Phase"
+                      type="Research Observation"
+                    />
+
+                    <ArchiveRow
+                      reference="OBJ-100726"
+                      title="Cross-Market Alignment Investigation"
+                      type="Research Objective"
+                    />
+
+                    <ArchiveRow
+                      reference="OUT-130726"
+                      title="Conflicting Signals Represent Different Market Stages"
+                      type="Research Outcome"
+                    />
+                  </div>
+                </section>
+              </div>
+
+              {/* Educational disclaimer */}
+              <section className={styles.disclaimer}>
+                <h2>Educational Purpose</h2>
+
+                <p>
+                  AngolaLab Trading Intelligence provides research, education
+                  and structured market observations. It does not provide
+                  personalised financial advice, guarantee outcomes or publish
+                  instructions to buy or sell financial instruments.
+                </p>
+              </section>
             </div>
           </section>
         </PageContainer>
@@ -88,29 +329,107 @@ export default function TradingPage() {
   );
 }
 
-// ✅ Reusable Metric Card — typed, styled, perfect
-function MetricCard({ label, value }: { label: string; value: string }) {
+type MarketCardProps = {
+  symbol: string;
+  name: string;
+  bias: "Bullish" | "Bearish" | "Neutral";
+  phase: string;
+  observation: string;
+};
+
+function MarketCard({
+  symbol,
+  name,
+  bias,
+  phase,
+  observation,
+}: MarketCardProps) {
+  const biasClass =
+    bias === "Bullish"
+      ? styles.bullish
+      : bias === "Bearish"
+        ? styles.bearish
+        : styles.neutral;
+
   return (
-    <div
-      style={{
-        border: "1px solid #e5e7eb",
-        borderRadius: "8px",
-        padding: "1.25rem",
-        background: "#ffffff",
-      }}
-    >
-      <p style={{ margin: 0, color: "#64748b", fontSize: "0.9rem" }}>
-        {label}
-      </p>
-      <h2
-        style={{
-          margin: "0.5rem 0 0",
-          color: "#0f172a",
-          fontSize: "1.3rem",
-        }}
-      >
-        {value}
-      </h2>
-    </div>
+    <article className={styles.marketCard}>
+      <div className={styles.cardHeader}>
+        <div>
+          <p className={styles.symbol}>{symbol}</p>
+          <h3>{name}</h3>
+        </div>
+
+        <span className={`${styles.biasBadge} ${biasClass}`}>
+          {bias}
+        </span>
+      </div>
+
+      <p className={styles.phase}>Phase: {phase}</p>
+      <p className={styles.cardText}>{observation}</p>
+    </article>
+  );
+}
+
+type BriefCardProps = {
+  title: string;
+  text: string;
+};
+
+function BriefCard({ title, text }: BriefCardProps) {
+  return (
+    <article className={styles.briefCard}>
+      <h3>{title}</h3>
+      <p>{text}</p>
+    </article>
+  );
+}
+
+type ObservationRowProps = {
+  market: string;
+  status: string;
+  condition: string;
+};
+
+function ObservationRow({
+  market,
+  status,
+  condition,
+}: ObservationRowProps) {
+  return (
+    <article className={styles.observationRow}>
+      <div>
+        <h3>{market}</h3>
+        <span>{status}</span>
+      </div>
+
+      <p>{condition}</p>
+    </article>
+  );
+}
+
+type ArchiveRowProps = {
+  reference: string;
+  title: string;
+  type: string;
+};
+
+function ArchiveRow({
+  reference,
+  title,
+  type,
+}: ArchiveRowProps) {
+  return (
+    <article className={styles.archiveRow}>
+      <p className={styles.archiveReference}>{reference}</p>
+
+      <div>
+        <h3>{title}</h3>
+        <p>{type}</p>
+      </div>
+
+      <span className={styles.archiveStatus}>
+        ● Completed
+      </span>
+    </article>
   );
 }
