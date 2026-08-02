@@ -172,8 +172,79 @@ The current navigation philosophy consists of:
 
 Navigation exists to guide readers, not distract them.
 
+Navigation should support understanding without interrupting the natural flow of research.
+
+If navigation helps understanding, keep it.
+
+If it only saves scrolling, question whether it is necessary.
+
+---
 ---
 
+# Visual Comfort
+
+The AngolaLab interface is designed for extended periods of reading, research, and analysis.
+
+Unlike platforms that optimise for rapid interaction, AngolaLab is designed to encourage deliberate observation, structured thinking, and sustained concentration.
+
+Visual comfort is considered a functional requirement rather than an aesthetic preference.
+
+Every interface decision should support the reader's ability to study information for extended periods without unnecessary visual fatigue.
+
+---
+
+# Research-First Design
+
+Every AngolaLab page should reinforce the research process.
+
+Information should be presented in a logical sequence that encourages understanding before conclusion.
+
+Readers should naturally progress from observation, through analysis, towards informed judgement.
+
+The interface should support learning rather than encourage rapid scanning.
+
+---
+
+# Cognitive Simplicity
+
+Every visual component should reduce unnecessary cognitive effort.
+
+Before introducing any new interface element, ask:
+
+> **Does this improve understanding or merely increase complexity?**
+
+If a feature increases complexity without strengthening learning, it should not be implemented.
+
+---
+
+# Reading Experience
+
+AngolaLab pages should remain comfortable to read during extended study sessions.
+
+Typography, spacing, colour, and layout should work together to minimise visual fatigue.
+
+The interface should feel closer to reading a well-designed book or research publication than browsing a commercial website.
+
+---
+
+# Institutional Identity
+
+Every AngolaLab laboratory should communicate the same institutional identity.
+
+Whether visiting:
+
+- Trading Intelligence
+- Development
+- AngolaLab Journal
+- Tourism Intelligence
+- BODIVA Laboratory
+- Future AEIS Laboratories
+
+the reader should immediately recognise that they remain within the AngolaLab research environment.
+
+Consistency strengthens trust, familiarity, and long-term confidence in the institution.
+
+---
 # Design Philosophy
 
 AngolaLab is a laboratory.
