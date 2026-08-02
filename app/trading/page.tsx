@@ -239,12 +239,7 @@ export default function TradingPage() {
   </div>
 </section>
 
-
-
-
-
-
-              {/* 04 and 05 */}
+ {/* 04 and 05 */}
               <div className={styles.lowerGrid}>
                 <section
                   id="markets-under-observation"
