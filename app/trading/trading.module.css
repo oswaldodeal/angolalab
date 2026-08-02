@@ -109,94 +109,6 @@
   box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.12);
 }
 
-/* Section navigation */
-
-.quickNav {
-  display: flex;
-  justify-content: flex-end;
-  margin-top: 1.25rem;
-  position: relative;
-  z-index: 20;
-}
-
-.sectionMenu {
-  position: relative;
-}
-
-.sectionMenuButton {
-  display: flex;
-  align-items: center;
-  gap: 0.55rem;
-  padding: 0.55rem 0.8rem;
-  color: #d4af37;
-  background: transparent;
-  border: 1px solid #7a621f;
-  border-radius: 8px;
-  cursor: pointer;
-  font-size: 0.88rem;
-  font-weight: 700;
-  list-style: none;
-  user-select: none;
-}
-
-.sectionMenuButton::-webkit-details-marker {
-  display: none;
-}
-
-.sectionMenuButton::after {
-  content: "▼";
-  color: #ffffff;
-  font-size: 0.68rem;
-  transition: transform 0.2s ease;
-}
-
-.sectionMenu[open] .sectionMenuButton::after {
-  transform: rotate(180deg);
-}
-
-.sectionMenuButton:hover,
-.sectionMenuButton:focus-visible {
-  color: #ffffff;
-  border-color: #d4af37;
-  outline: none;
-}
-
-.sectionMenuDropdown {
-  position: absolute;
-  top: calc(100% + 0.5rem);
-  right: 0;
-  width: max-content;
-  min-width: 245px;
-  padding: 0.5rem;
-  background: #ffffff;
-  border: 1px solid #d1d5db;
-  border-radius: 10px;
-  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.3);
-}
-
-.sectionMenuLink {
-  display: flex;
-  align-items: center;
-  gap: 0.65rem;
-  padding: 0.7rem 0.8rem;
-  border-radius: 7px;
-  color: #111111;
-  text-decoration: none;
-  font-size: 0.9rem;
-  font-weight: 600;
-}
-
-.sectionMenuLink:hover,
-.sectionMenuLink:focus-visible {
-  color: #111111;
-  background: #f5f0df;
-  outline: none;
-}
-
-.menuSpacer {
-  width: 1rem;
-  flex: 0 0 1rem;
-}
 
 /* Laboratory sections */
 
@@ -366,6 +278,92 @@
   color: #f3f4f6;
   line-height: 1.8;
 }
+
+/* Weekly brief identity */
+
+.briefIdentity {
+  margin-top: 1.25rem;
+  overflow: hidden;
+  background: #171717;
+  border: 1px solid #7a621f;
+  border-radius: 12px;
+}
+
+.briefIdentityHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 1.25rem;
+  border-bottom: 1px solid #3f3f46;
+}
+
+.briefInstitution {
+  margin: 0;
+  color: #d4af37;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.briefReference {
+  margin: 0.4rem 0 0;
+  color: #ffffff;
+  font-size: 1.15rem;
+}
+
+.briefStatus {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #d4af37;
+  font-size: 0.8rem;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.briefStatusDot {
+  width: 9px;
+  height: 9px;
+  flex: 0 0 auto;
+  border-radius: 50%;
+  background: #22c55e;
+  box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.12);
+}
+
+.briefMetadata {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.briefMetadata > div {
+  min-width: 0;
+  padding: 1rem 1.25rem;
+  border-right: 1px solid #3f3f46;
+}
+
+.briefMetadata > div:last-child {
+  border-right: 0;
+}
+
+.briefMetadata p {
+  margin: 0;
+  color: #a1a1aa;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.briefMetadata span {
+  display: block;
+  margin-top: 0.4rem;
+  color: #f3f4f6;
+  font-size: 0.88rem;
+  line-height: 1.5;
+}
+
 
 /* Weekly intelligence brief */
 
@@ -574,15 +572,7 @@
     font-size: 1rem;
   }
 
-  .quickNav {
-  justify-content: flex-start;
-}
-
-.sectionMenuDropdown {
-  right: auto;
-  left: 0;
-  min-width: min(245px, calc(100vw - 4.5rem));
-}
+  
 
   .section {
     margin-top: 3rem;
@@ -616,6 +606,24 @@
   .archiveStatus {
     justify-self: start;
   }
+
+.briefIdentityHeader {
+  flex-direction: column;
+}
+
+.briefMetadata {
+  grid-template-columns: 1fr;
+}
+
+.briefMetadata > div {
+  border-right: 0;
+  border-bottom: 1px solid #3f3f46;
+}
+
+.briefMetadata > div:last-child {
+  border-bottom: 0;
+}
+
 }
 
 @media (max-width: 550px) {

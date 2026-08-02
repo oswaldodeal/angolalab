@@ -10,6 +10,13 @@ const laboratoryStatus = {
   method: "AEIS Research Methodology",
 };
 
+const weeklyBrief = {
+  reference: "TI-030826-01",
+  publicationDate: "03 August 2026",
+  preparedBy: "AngolaLab Trading Laboratory",
+  status: "Active Research",
+};
+
 export default function TradingPage() {
   return (
     <>
@@ -47,7 +54,9 @@ export default function TradingPage() {
                 <h2 className={styles.activeStatus}>
                   <span className={styles.statusDot} />
                   {laboratoryStatus.status}
+
                 </h2>
+
               </div>
 
               <div className={styles.statusItem}>
@@ -65,46 +74,6 @@ export default function TradingPage() {
                 <h2>{laboratoryStatus.method}</h2>
               </div>
             </section>
-
-            {/* Quick navigation */}
-           <nav
-  className={styles.quickNav}
-  aria-label="Trading Intelligence sections"
->
-  <details className={styles.sectionMenu}>
-    <summary className={styles.sectionMenuButton}>
-      Sections
-    </summary>
-
-    <div className={styles.sectionMenuDropdown}>
-      <a href="#overview" className={styles.sectionMenuLink}>
-        <span aria-hidden="true">✓</span>
-        <span>Overview</span>
-      </a>
-
-      <a href="#weekly-brief" className={styles.sectionMenuLink}>
-        <span className={styles.menuSpacer} aria-hidden="true" />
-        <span>Weekly Brief</span>
-      </a>
-
-      <a
-        href="#markets-under-observation"
-        className={styles.sectionMenuLink}
-      >
-        <span className={styles.menuSpacer} aria-hidden="true" />
-        <span>Markets Under Observation</span>
-      </a>
-
-      <a
-        href="#research-archive"
-        className={styles.sectionMenuLink}
-      >
-        <span className={styles.menuSpacer} aria-hidden="true" />
-        <span>Research Archive</span>
-      </a>
-    </div>
-  </details>
-</nav>
 
             <div className={styles.laboratoryContent}>
               {/* 01 — Market Environment */}
@@ -195,45 +164,85 @@ export default function TradingPage() {
                 </article>
               </section>
 
-              {/* 03 — Weekly Intelligence Brief */}
-              <section
-                id="weekly-brief"
-                className={styles.section}
-              >
-                <div className={styles.sectionHeading}>
-                  <div>
-                    <p className={styles.sectionNumber}>03</p>
-                    <h2>Weekly Intelligence Brief</h2>
-                  </div>
+             {/* 03 — Weekly Intelligence Brief */}
+<section
+  id="weekly-brief"
+  className={styles.section}
+>
+  <div className={styles.sectionHeading}>
+    <div>
+      <p className={styles.sectionNumber}>03</p>
+      <h2>Weekly Intelligence Brief</h2>
+    </div>
 
-                  <p>
-                    A structured interpretation of the current market
-                    environment.
-                  </p>
-                </div>
+    <p>
+      A structured interpretation of the current market environment.
+    </p>
+  </div>
 
-                <div className={styles.briefGrid}>
-                  <BriefCard
-                    title="Observation"
-                    text="The USD Dollar Index and US 10-year yields remain supported, maintaining pressure on assets sensitive to a stronger dollar and a higher cost of capital."
-                  />
+  <div className={styles.briefIdentity}>
+    <div className={styles.briefIdentityHeader}>
+      <div>
+        <p className={styles.briefInstitution}>
+          AEIS Weekly Intelligence Brief
+        </p>
 
-                  <BriefCard
-                    title="Structural Relationship"
-                    text="Gold and Bitcoin should not be studied independently. Their behaviour must be evaluated against the direction of the USD Dollar Index, yields and higher-timeframe market structure."
-                  />
+        <h3 className={styles.briefReference}>
+          {weeklyBrief.reference}
+        </h3>
+      </div>
 
-                  <BriefCard
-                    title="Risk"
-                    text="Macro alignment does not guarantee immediate price continuation. Markets may remain in absorption, transition or delayed expansion."
-                  />
+      <span className={styles.briefStatus}>
+        <span className={styles.briefStatusDot} />
+        {weeklyBrief.status}
+      </span>
+    </div>
 
-                  <BriefCard
-                    title="Condition to Monitor"
-                    text="Wait for daily and four-hour structure to confirm the macro environment. No confirmation means no execution."
-                  />
-                </div>
-              </section>
+    <div className={styles.briefMetadata}>
+      <div>
+        <p>Publication Date</p>
+        <span>{weeklyBrief.publicationDate}</span>
+      </div>
+
+      <div>
+        <p>Prepared By</p>
+        <span>{weeklyBrief.preparedBy}</span>
+      </div>
+
+      <div>
+        <p>Research Method</p>
+        <span>AEIS Research Methodology</span>
+      </div>
+    </div>
+  </div>
+
+  <div className={styles.briefGrid}>
+    <BriefCard
+      title="Observation"
+      text="The USD Dollar Index and US 10-year yields remain supported, maintaining pressure on assets sensitive to a stronger dollar and a higher cost of capital."
+    />
+
+    <BriefCard
+      title="Structural Relationship"
+      text="Gold and Bitcoin should not be studied independently. Their behaviour must be evaluated against the direction of the USD Dollar Index, yields and higher-timeframe market structure."
+    />
+
+    <BriefCard
+      title="Risk"
+      text="Macro alignment does not guarantee immediate price continuation. Markets may remain in absorption, transition or delayed expansion."
+    />
+
+    <BriefCard
+      title="Condition to Monitor"
+      text="Wait for daily and four-hour structure to confirm the macro environment. No confirmation means no execution."
+    />
+  </div>
+</section>
+
+
+
+
+
 
               {/* 04 and 05 */}
               <div className={styles.lowerGrid}>
