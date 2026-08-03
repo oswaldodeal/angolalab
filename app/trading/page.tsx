@@ -1,3 +1,4 @@
+import WeeklyIntelligenceBrief from "@/components/WeeklyIntelligenceBrief";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import PageContainer from "@/components/PageContainer";
@@ -15,6 +16,15 @@ const weeklyBrief = {
   publicationDate: "03 August 2026",
   preparedBy: "AngolaLab Trading Laboratory",
   status: "Active Research",
+};
+
+const weeklyBriefSummary = {
+  title: "Executive Summary",
+  text: [
+    "The USD Dollar Index and US 10-Year Treasury yields remain structurally supported, continuing to define the broader macroeconomic environment.",
+    "Gold and Bitcoin remain sensitive to changes in dollar strength, yields and higher-timeframe market structure.",
+    "The current assessment remains conditional. Further structural confirmation is required before any execution decision becomes valid.",
+  ],
 };
 
 export default function TradingPage() {
@@ -50,13 +60,10 @@ export default function TradingPage() {
             >
               <div className={styles.statusItem}>
                 <p>Laboratory Status</p>
-
                 <h2 className={styles.activeStatus}>
                   <span className={styles.statusDot} />
                   {laboratoryStatus.status}
-
                 </h2>
-
               </div>
 
               <div className={styles.statusItem}>
@@ -164,82 +171,64 @@ export default function TradingPage() {
                 </article>
               </section>
 
-             {/* 03 — Weekly Intelligence Brief */}
-<section
-  id="weekly-brief"
-  className={styles.section}
->
-  <div className={styles.sectionHeading}>
-    <div>
-      <p className={styles.sectionNumber}>03</p>
-      <h2>Weekly Intelligence Brief</h2>
-    </div>
+              {/* 03 — Weekly Intelligence Brief */}
+              <section id="weekly-brief" className={styles.section}>
+                <div className={styles.sectionHeading}>
+                  <div>
+                    <p className={styles.sectionNumber}>03</p>
+                    <h2>Weekly Intelligence Brief</h2>
+                  </div>
 
-    <p>
-      A structured interpretation of the current market environment.
-    </p>
+                  <p>
+                    A structured interpretation of the current market environment.
+                  </p>
+                </div>
+
+                <WeeklyIntelligenceBrief
+  reference={weeklyBrief.reference}
+  publicationDate={weeklyBrief.publicationDate}
+  preparedBy={weeklyBrief.preparedBy}
+  status={weeklyBrief.status}
+/>
+
+<article className={styles.executiveSummary}>
+  <p className={styles.summaryLabel}>
+    Weekly Research Overview
+  </p>
+
+  <h3>{weeklyBriefSummary.title}</h3>
+
+  <div className={styles.summaryText}>
+    {weeklyBriefSummary.text.map((paragraph) => (
+      <p key={paragraph}>{paragraph}</p>
+    ))}
   </div>
+</article>
 
-  <div className={styles.briefIdentity}>
-    <div className={styles.briefIdentityHeader}>
-      <div>
-        <p className={styles.briefInstitution}>
-          AEIS Weekly Intelligence Brief
-        </p>
+                <div className={styles.briefGrid}>
+                  <BriefCard
+                    title="Observation"
+                    text="The USD Dollar Index and US 10-year yields remain supported, maintaining pressure on assets sensitive to a stronger dollar and a higher cost of capital."
+                  />
 
-        <h3 className={styles.briefReference}>
-          {weeklyBrief.reference}
-        </h3>
-      </div>
+                  <BriefCard
+                    title="Structural Relationships"
+                    text="Gold and Bitcoin should not be studied independently. Their behaviour must be evaluated against the direction of the USD Dollar Index, yields and higher-timeframe market structure."
+                  />
 
-      <span className={styles.briefStatus}>
-        <span className={styles.briefStatusDot} />
-        {weeklyBrief.status}
-      </span>
-    </div>
+                  <BriefCard
+                    title="Risk Assessment"
+                    text="Macro alignment does not guarantee immediate price continuation. Markets may remain in absorption, transition or delayed expansion."
+                  />
 
-    <div className={styles.briefMetadata}>
-      <div>
-        <p>Publication Date</p>
-        <span>{weeklyBrief.publicationDate}</span>
-      </div>
+                  <BriefCard
+                    title="Conditions Under Observation"
+                    text="Wait for daily and four-hour structure to confirm the macro environment. No confirmation means no execution."
+                  />
+                </div>
+              </section>
 
-      <div>
-        <p>Prepared By</p>
-        <span>{weeklyBrief.preparedBy}</span>
-      </div>
-
-      <div>
-        <p>Research Method</p>
-        <span>AEIS Research Methodology</span>
-      </div>
-    </div>
-  </div>
-
-  <div className={styles.briefGrid}>
-    <BriefCard
-      title="Observation"
-      text="The USD Dollar Index and US 10-year yields remain supported, maintaining pressure on assets sensitive to a stronger dollar and a higher cost of capital."
-    />
-
-    <BriefCard
-      title="Structural Relationship"
-      text="Gold and Bitcoin should not be studied independently. Their behaviour must be evaluated against the direction of the USD Dollar Index, yields and higher-timeframe market structure."
-    />
-
-    <BriefCard
-      title="Risk"
-      text="Macro alignment does not guarantee immediate price continuation. Markets may remain in absorption, transition or delayed expansion."
-    />
-
-    <BriefCard
-      title="Condition to Monitor"
-      text="Wait for daily and four-hour structure to confirm the macro environment. No confirmation means no execution."
-    />
-  </div>
-</section>
-
- {/* 04 and 05 */}
+              {/* 04 and 05 */}
               <div className={styles.lowerGrid}>
                 <section
                   id="markets-under-observation"
