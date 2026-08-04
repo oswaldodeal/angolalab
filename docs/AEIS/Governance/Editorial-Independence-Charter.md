@@ -16,6 +16,7 @@ Trust is the foundation upon which AngolaLab is built.
 
 ---
 
+
 # Institutional Commitment
 
 AngolaLab exists to improve understanding through evidence-based intelligence.
@@ -88,6 +89,18 @@ Commercial relationships shall remain separate from analytical judgement.
 
 ---
 
+# Editorial Inclusion
+
+Inclusion within an AEIS Research Publication is determined solely through research.
+
+Organisations, businesses, institutions, events, or individuals may appear within an Executive Summary or any other publication only where their activities are relevant to the subject of the research and have been appropriately verified.
+
+Editorial inclusion cannot be purchased.
+
+Recognition must be earned through genuine and verifiable developments.
+
+Financial support, sponsorship, partnerships or advertising shall never influence editorial inclusion.
+
 # Governments and Public Institutions
 
 AngolaLab may analyse public policy, institutions and government activity using the same analytical standards applied to every other organisation.
@@ -159,3 +172,4 @@ These principles shall guide AngolaLab for future generations.
 This Charter forms part of the Living Documentation of the Angola Economic Intelligence System (AEIS).
 
 It will evolve responsibly as AngolaLab grows while preserving its commitment to editorial independence, institutional integrity and public trust.
+

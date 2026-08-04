@@ -18,6 +18,12 @@ const weeklyBrief = {
   status: "Active Research",
 };
 
+const researchConfidence = {
+  level: "High",
+  statement:
+    "Current macroeconomic evidence strongly supports the broader assessment. Execution decisions remain conditional upon higher-timeframe confirmation and the Trading Laboratory's execution framework.",
+};
+
 const weeklyBriefSummary = {
   title: "Executive Summary",
   text: [
@@ -176,7 +182,7 @@ export default function TradingPage() {
                 <div className={styles.sectionHeading}>
                   <div>
                     <p className={styles.sectionNumber}>03</p>
-                    <h2>Weekly Intelligence Brief</h2>
+                    <h2>Latest Research Publication</h2>
                   </div>
 
                   <p>
@@ -191,12 +197,11 @@ export default function TradingPage() {
   status={weeklyBrief.status}
 />
 
+
 <article className={styles.executiveSummary}>
   <p className={styles.summaryLabel}>
-    Weekly Research Overview
+    Executive Summary
   </p>
-
-  <h3>{weeklyBriefSummary.title}</h3>
 
   <div className={styles.summaryText}>
     {weeklyBriefSummary.text.map((paragraph) => (
@@ -205,8 +210,23 @@ export default function TradingPage() {
   </div>
 </article>
 
+
+<article className={styles.researchConfidence}>
+  <p className={styles.confidenceLabel}>
+    Research Confidence
+  </p>
+
+  <h3>{researchConfidence.level}</h3>
+
+  <p className={styles.confidenceStatement}>
+    {researchConfidence.statement}
+  </p>
+</article>
+
+
                 <div className={styles.briefGrid}>
-                  <BriefCard
+
+                 <BriefCard
                     title="Observation"
                     text="The USD Dollar Index and US 10-year yields remain supported, maintaining pressure on assets sensitive to a stronger dollar and a higher cost of capital."
                   />
@@ -227,6 +247,24 @@ export default function TradingPage() {
                   />
                 </div>
               </section>
+
+              <article className={styles.researchConclusion}>
+  <p className={styles.conclusionLabel}>
+    Research Conclusion
+  </p>
+
+  <p>
+    The Trading Laboratory continues to monitor the relationship
+    between the USD Dollar Index, US 10-Year Treasury yields,
+    Gold and Bitcoin.
+  </p>
+
+  <p>
+    The current assessment remains conditional. Future
+    publications may revise these observations as new
+    macroeconomic evidence becomes available.
+  </p>
+</article>
 
               {/* 04 and 05 */}
               <div className={styles.lowerGrid}>
@@ -300,6 +338,66 @@ export default function TradingPage() {
                   </div>
                 </section>
               </div>
+
+<section className={styles.section}>
+  <div className={styles.sectionHeader}>
+    <span className={styles.sectionNumber}>06</span>
+
+    <div>
+      <h2>Institutional Partnerships</h2>
+      <p>
+        Supporting independent research, education and
+        institutional development.
+      </p>
+    </div>
+  </div>
+
+  <div className={styles.partnershipGrid}>
+    <article className={styles.partnershipCard}>
+      <h3>Research Institution</h3>
+
+      <p>
+        Reserved for future collaboration with universities, research 
+        centres and scientific organisations.
+      </p>
+
+      <span className={styles.partnershipCategory}>
+        Research
+      </span>
+    </article>
+
+    <article className={styles.partnershipCard}>
+      <h3>Education Partner</h3>
+
+      <p>
+        Reserved for future collaboration with schools, universities and 
+        educational institutions.
+      </p>
+
+      <span className={styles.partnershipCategory}>
+        Education
+      </span>
+    </article>
+
+    <article className={styles.partnershipCard}>
+      <h3>Innovation Partner</h3>
+
+      <p>
+        Reserved for future collaboration with technology 
+        companies, innovators and industry leaders.
+      </p>
+
+      <span className={styles.partnershipCategory}>
+        Innovation
+      </span>
+    </article>
+  </div>
+
+  <p className={styles.partnershipNote}>
+  Supporting independent research, education, and the long-term 
+  development of AngolaLab.
+  </p>
+</section>
 
               {/* Educational disclaimer */}
               <section className={styles.disclaimer}>
