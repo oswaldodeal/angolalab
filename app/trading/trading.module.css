@@ -2,6 +2,16 @@
 
 /* Research confidence */
 
+.trading-page {
+  min-height: 100vh;
+  background:
+    radial-gradient(
+      circle at top center,
+      rgba(212, 175, 55, 0.04),
+      transparent 600px
+    ),
+    #090b0d;
+}
 
 .partnershipGrid {
   display: grid;
@@ -105,7 +115,13 @@
   min-height: 100vh;
   margin: 0;
   padding: 0;
-  background: #ffffff;
+  background:
+    radial-gradient(
+      circle at top center,
+      rgba(212, 175, 55, 0.04),
+      transparent 600px
+    ),
+    #090b0d;
   color: #ffffff;
 }
 

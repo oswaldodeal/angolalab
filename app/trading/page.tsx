@@ -13,7 +13,7 @@ const laboratoryStatus = {
 
 const weeklyBrief = {
   reference: "TI-030826-01",
-  publicationDate: "03 August 2026",
+  publicationDate: "08 August 2026",
   preparedBy: "AngolaLab Trading Laboratory",
   status: "Active Research",
 };
@@ -27,9 +27,9 @@ const researchConfidence = {
 const weeklyBriefSummary = {
   title: "Executive Summary",
   text: [
-    "The USD Dollar Index and US 10-Year Treasury yields remain structurally supported, continuing to define the broader macroeconomic environment.",
-    "Gold and Bitcoin remain sensitive to changes in dollar strength, yields and higher-timeframe market structure.",
-    "The current assessment remains conditional. Further structural confirmation is required before any execution decision becomes valid.",
+    "The current macro environment remains primarily driven by the interaction between the US Dollar Index and US 10-Year Treasury Yields. The US Dollar Index continues to exhibit underlying structural strength, while Treasury yields are testing a significant higher-timeframe decision zone that may influence the next phase of market direction.",
+    "Gold, Bitcoin, and emerging market assets continue to respond in alignment with these core macro drivers, reflecting ongoing shifts in global capital flows rather than isolated market developments.",
+    "AEIS Assessment: The broader market structure remains intact. Until the relationship between the US Dollar Index and Treasury yields changes materially, these two indicators will continue to serve as the primary framework for analysing global financial markets.",
   ],
 };
 
