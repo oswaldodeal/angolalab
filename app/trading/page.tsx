@@ -33,6 +33,32 @@ const weeklyBriefSummary = {
   ],
 };
 
+const educationalResources = [
+  {
+    title: "The Structure Beneath the Noise",
+    subtitle: "From Reaction to Alignment in Trading and Life.",
+    series: "AngolaLab Philosophy Series — Book I",
+    status: "Available",
+    hardcoverUrl: "#",
+    paperbackUrl: "#",
+    kindleUrl: "#",
+  },
+  {
+    title: "Forex Trading Mirror",
+    subtitle:
+      "Understanding market structure through systems thinking and macroeconomic alignment.",
+    series: "AngolaLab Philosophy Series — Book II",
+    status: "In Development",
+  },
+  {
+    title: "AEIS Research Methodology",
+    subtitle:
+      "The official research framework of the Angola Economic Intelligence System.",
+    series: "AEIS Educational Framework",
+    status: "In Development",
+  },
+];
+
 export default function TradingPage() {
   return (
     <>
@@ -338,8 +364,10 @@ export default function TradingPage() {
                   </div>
                 </section>
               </div>
-
-<section className={styles.section}>
+{/* 06 — Institutional Partnerships */}
+<section
+  className={`${styles.section} ${styles.partnershipSection}`}
+>
   <div className={styles.sectionHeader}>
     <span className={styles.sectionNumber}>06</span>
 
@@ -399,6 +427,94 @@ export default function TradingPage() {
   </p>
 </section>
 
+{/* 07 — Educational Resources */}
+<section
+  id="educational-resources"
+  className={styles.section}
+>
+  <div className={styles.sectionHeading}>
+    <div>
+      <p className={styles.sectionNumber}>07</p>
+      <h2>Educational Resources</h2>
+    </div>
+
+    <p>
+      Supporting independent learning through books, research
+      frameworks and educational programmes.
+    </p>
+  </div>
+
+  <div className={styles.educationalGrid}>
+    {educationalResources.map((resource) => {
+      const isAvailable = resource.status === "Available";
+
+      return (
+        <article
+          key={resource.title}
+          className={styles.educationalCard}
+        >
+          <div className={styles.educationalCardHeader}>
+            <p className={styles.resourceSeries}>
+              {resource.series}
+            </p>
+
+            <span
+              className={
+                isAvailable
+                  ? styles.resourceAvailable
+                  : styles.resourceDevelopment
+              }
+            >
+              {resource.status}
+            </span>
+          </div>
+
+          <div className={styles.resourceContent}>
+            <h3>{resource.title}</h3>
+            <p>{resource.subtitle}</p>
+          </div>
+
+          {isAvailable ? (
+            <div className={styles.resourceLinks}>
+              <a
+                href={resource.hardcoverUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Hardcover
+              </a>
+
+              <a
+                href={resource.paperbackUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Paperback
+              </a>
+
+              <a
+                href={resource.kindleUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Kindle
+              </a>
+            </div>
+          ) : (
+            <p className={styles.resourceNotice}>
+              Publication details will be released through AngolaLab.
+            </p>
+          )}
+        </article>
+      );
+    })}
+  </div>
+
+  <p className={styles.educationalNote}>
+    Official AngolaLab publications are distributed through
+    Amazon Kindle Direct Publishing.
+  </p>
+</section>
               {/* Educational disclaimer */}
               <section className={styles.disclaimer}>
                 <h2>Educational Purpose</h2>
