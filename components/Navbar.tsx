@@ -2,6 +2,10 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { FlagUK, 
+  FlagPortugal, 
+  FlagNetherlands,
+ } from "@/components/flags";
 
 export default function Navbar() {
   const [languageOpen, setLanguageOpen] = useState(false);
@@ -94,6 +98,7 @@ export default function Navbar() {
                 style={languageOptionStyle}
               >
                 <span aria-hidden="true">✓</span>
+                <FlagUK />
                 <span>English</span>
               </Link>
 
@@ -103,10 +108,8 @@ export default function Navbar() {
                 onClick={() => setLanguageOpen(false)}
                 style={languageOptionStyle}
               >
-                <span
-                  aria-hidden="true"
-                  style={{ width: "1rem" }}
-                />
+                <span aria-hidden="true" style={{ width: "1rem" }} />
+                <FlagPortugal />
                 <span>Português</span>
               </Link>
 
@@ -116,10 +119,8 @@ export default function Navbar() {
                 onClick={() => setLanguageOpen(false)}
                 style={languageOptionStyle}
               >
-                <span
-                  aria-hidden="true"
-                  style={{ width: "1rem" }}
-                />
+                <span aria-hidden="true" style={{ width: "1rem" }} />
+                <FlagNetherlands />
                 <span>Nederlands</span>
               </Link>
             </div>
@@ -143,7 +144,7 @@ const languageButtonStyle = {
   alignItems: "center",
   gap: "0.4rem",
   padding: "0.45rem 0.6rem",
-  color: "#ffffff",
+  color: "#b08d2f",
   background: "transparent",
   border: "none",
   borderRadius: "7px",
@@ -156,11 +157,11 @@ const languageButtonStyle = {
 const languageMenuStyle = {
   position: "absolute",
   top: "calc(100% + 14px)",
-  left: -67,
+  left: -90,
   zIndex: 1100,
-  minWidth: "100px",
-  padding: "0.55rem",
-  background: "#111111",
+  minWidth: "200px",
+  padding: "0.75rem 1rem",
+  background: "transparent",
   border: "none",
   borderRadius: "0 0 10px 10px",
   boxShadow: "none",
@@ -171,7 +172,7 @@ const languageOptionStyle = {
   alignItems: "center",
   gap: "0.65rem",
   padding: "0.7rem 0.8rem",
-  color: "#f3f4f6",
+  color: "#b08d2f",
   background: "transparent",
   borderRadius: "7px",
   fontSize: "0.9rem",
