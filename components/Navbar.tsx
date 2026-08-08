@@ -2,10 +2,12 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { FlagUK, 
-  FlagPortugal, 
+
+import {
+  FlagUK,
+  FlagPortugal,
   FlagNetherlands,
- } from "@/components/flags";
+} from "@/components/flags";
 
 export default function Navbar() {
   const [languageOpen, setLanguageOpen] = useState(false);
@@ -27,9 +29,11 @@ export default function Navbar() {
           display: "flex",
           alignItems: "center",
           gap: "1.25rem",
+          width: "100%",
           maxWidth: "1185px",
           margin: "0 auto",
-          padding: "0.6rem 1rem",
+          padding: "0.6rem 4rem",
+          boxSizing: "border-box",
         }}
       >
         <Link
@@ -75,7 +79,9 @@ export default function Navbar() {
             aria-haspopup="menu"
             aria-expanded={languageOpen}
             aria-label="Select language"
-            onClick={() => setLanguageOpen((current) => !current)}
+            onClick={() =>
+              setLanguageOpen((current) => !current)
+            }
             style={languageButtonStyle}
           >
             <span aria-hidden="true">🌐</span>
@@ -108,7 +114,10 @@ export default function Navbar() {
                 onClick={() => setLanguageOpen(false)}
                 style={languageOptionStyle}
               >
-                <span aria-hidden="true" style={{ width: "1rem" }} />
+                <span
+                  aria-hidden="true"
+                  style={{ width: "1rem" }}
+                />
                 <FlagPortugal />
                 <span>Português</span>
               </Link>
@@ -119,7 +128,10 @@ export default function Navbar() {
                 onClick={() => setLanguageOpen(false)}
                 style={languageOptionStyle}
               >
-                <span aria-hidden="true" style={{ width: "1rem" }} />
+                <span
+                  aria-hidden="true"
+                  style={{ width: "1rem" }}
+                />
                 <FlagNetherlands />
                 <span>Nederlands</span>
               </Link>

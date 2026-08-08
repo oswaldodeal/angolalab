@@ -137,7 +137,7 @@
   min-height: calc(100vh - 140px);
   margin: 0 0 2rem;
   padding: 2.5rem 3rem 3rem;
-  background: #111111;
+  background: transparent;
   border-bottom: 6px solid #b08d2f;
   border-radius: 0 0 18px 18px;
 }
@@ -968,4 +968,5 @@
   .resourceLinks a {
     text-align: center;
   }
+  
 }
