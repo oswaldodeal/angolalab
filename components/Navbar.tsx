@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { FlagUK, FlagPortugal, FlagNetherlands } from "@/components/flags";
 
 export default function Navbar() {
   const [languageOpen, setLanguageOpen] = useState(false);
@@ -9,158 +10,169 @@ export default function Navbar() {
   return (
     <header
       style={{
-        borderBottom: "3px solid #b08d2f",
-        background: "#111111",
         position: "sticky",
         top: 0,
         zIndex: 1000,
+        background: "#111111",
+        borderBottom: "3px solid #b08d2f",
       }}
     >
-  
       <nav
-  style={{
-  maxWidth: "1185px",
-  margin: "0 auto",
-  padding: "0.6rem 1rem",
-  display: "flex",
-  alignItems: "center",
-}}
->
-  <Link
-    href="/"
-    style={{
-      textDecoration: "none",
-      color: "#ffffff",
-      fontWeight: "bold",
-      fontSize: "1.3rem",
-      whiteSpace: "nowrap",
-    }}
-  >
-    AngolaLab
-  </Link>
-
-  <div
-    style={{
-  display: "flex",
-  alignItems: "center",
-  gap: "1rem",
-  marginLeft: "2rem",
-}}
-  >
-    <Link href="/home" style={linkStyle}>
-      Home
-    </Link>
-
-    <Link href="/development" style={linkStyle}>
-      Development
-    </Link>
-
-    <Link href="/journal" style={linkStyle}>
-      Journal
-    </Link>
-
-    <Link href="/framework" style={linkStyle}>
-      Framework
-    </Link>
-
-    <Link href="/about" style={linkStyle}>
-      About
-    </Link>
-  </div>
-
-  <div
-  style={{
-    marginLeft: "auto",
-    position: "relative",
-  }}
->
-    <button
-      type="button"
-      onClick={() => setLanguageOpen((open) => !open)}
-      aria-expanded={languageOpen}
-      aria-haspopup="menu"
-      aria-label="Select language"
-      style={{
-        background: "transparent",
-        border: "none",
-        color: "#ffffff",
-        cursor: "pointer",
-        font: "inherit",
-        fontSize: "0.9rem",
-        fontWeight: 600,
-        padding: "0.4rem 0",
-        whiteSpace: "nowrap",
-      }}
-    >
-      🌐 EN {languageOpen ? "▲" : "▼"}
-    </button>
-
-    {languageOpen && (
-      <div
-        role="menu"
+        aria-label="Main navigation"
         style={{
-          position: "absolute",
-          top: "calc(100% + 0.5rem)",
-          right: 0,
-          minWidth: "180px",
-          padding: "0.65rem",
-          background: "#ffffff",
-          border: "1px solid #e5e7eb",
-          borderRadius: "10px",
-          boxShadow: "0 12px 30px rgba(0, 0, 0, 0.12)",
-          zIndex: 1100,
+          position: "relative",
+          display: "flex",
+          alignItems: "center",
+          gap: "1.25rem",
+          maxWidth: "1185px",
+          margin: "0 auto",
+          padding: "0.6rem 1rem",
         }}
       >
         <Link
-          href="/home"
-          onClick={() => setLanguageOpen(false)}
-          style={languageOptionStyle}
+          href="/"
+          style={{
+            ...linkStyle,
+            marginRight: "0.75rem",
+            fontSize: "1.3rem",
+            fontWeight: 800,
+          }}
         >
-          <span>✓</span>
-          <span>🇬🇧 English</span>
+          AngolaLab
         </Link>
 
-        <Link
-          href="/pt"
-          onClick={() => setLanguageOpen(false)}
-          style={languageOptionStyle}
-        >
-          <span style={{ width: "1rem" }} />
-          <span>🇵🇹 Português</span>
+        <Link href="/" style={linkStyle}>
+          Home
         </Link>
 
-        <Link
-          href="/nl"
-          onClick={() => setLanguageOpen(false)}
-          style={languageOptionStyle}
-        >
-          <span style={{ width: "1rem" }} />
-          <span>🇳🇱 Nederlands</span>
+        <Link href="/development" style={linkStyle}>
+          Development
         </Link>
-      </div>
-    )}
-  </div>
-</nav>
+
+        <Link href="/journal" style={linkStyle}>
+          Journal
+        </Link>
+
+        <Link href="/framework" style={linkStyle}>
+          Framework
+        </Link>
+
+        <Link href="/about" style={linkStyle}>
+          About
+        </Link>
+
+        <div
+          style={{
+            position: "relative",
+            marginLeft: "auto",
+          }}
+        >
+          <button
+            type="button"
+            aria-haspopup="menu"
+            aria-expanded={languageOpen}
+            aria-label="Select language"
+            onClick={() => setLanguageOpen((current) => !current)}
+            style={languageButtonStyle}
+          >
+            <span aria-hidden="true">🌐</span>
+            <span>EN</span>
+            <span aria-hidden="true">
+              {languageOpen ? "▲" : "▼"}
+            </span>
+          </button>
+
+          {languageOpen && (
+            <div
+              role="menu"
+              aria-label="Language options"
+              style={languageMenuStyle}
+            >
+              <Link
+                href="/"
+                role="menuitem"
+                onClick={() => setLanguageOpen(false)}
+                style={languageOptionStyle}
+              >
+                <span aria-hidden="true">✓</span>
+                <FlagUK />
+                <span>English</span>
+              </Link>
+
+              <Link
+                href="/pt"
+                role="menuitem"
+                onClick={() => setLanguageOpen(false)}
+                style={languageOptionStyle}
+              >
+                <span aria-hidden="true" style={{ width: "1rem" }} />
+                <FlagPortugal />
+                <span>Português</span>
+              </Link>
+
+              <Link
+                href="/nl"
+                role="menuitem"
+                onClick={() => setLanguageOpen(false)}
+                style={languageOptionStyle}
+              >
+                <span aria-hidden="true" style={{ width: "1rem" }} />
+                <FlagNetherlands />
+                <span>Nederlands</span>
+              </Link>
+            </div>
+          )}
+        </div>
+      </nav>
     </header>
   );
 }
 
 const linkStyle = {
-  textDecoration: "none",
   color: "#ffffff",
   fontSize: "0.9rem",
   fontWeight: 500,
+  textDecoration: "none",
   whiteSpace: "nowrap",
-};
+} as const;
+
+const languageButtonStyle = {
+  display: "inline-flex",
+  alignItems: "center",
+  gap: "0.4rem",
+  padding: "0.45rem 0.6rem",
+  color: "#b08d2f",
+  background: "transparent",
+  border: "none",
+  borderRadius: "7px",
+  fontFamily: "inherit",
+  fontSize: "0.9rem",
+  fontWeight: 700,
+  cursor: "pointer",
+} as const;
+
+const languageMenuStyle = {
+  position: "absolute",
+  top: "calc(100% + 14px)",
+  left: -90,
+  zIndex: 1100,
+  minWidth: "200px",
+  padding: "0.75rem 1rem",
+  background: "transparent",
+  border: "none",
+  borderRadius: "0 0 10px 10px",
+  boxShadow: "none",
+} as const;
 
 const languageOptionStyle = {
   display: "flex",
   alignItems: "center",
   gap: "0.65rem",
   padding: "0.7rem 0.8rem",
+  color: "#b08d2f",
+  background: "transparent",
   borderRadius: "7px",
-  color: "#111111",
-  textDecoration: "none",
   fontSize: "0.9rem",
   fontWeight: 600,
-};
+  textDecoration: "none",
+} as const;
