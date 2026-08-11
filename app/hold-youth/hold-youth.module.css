@@ -1,0 +1,156 @@
+.holdYouthPage {
+  min-height: 100vh;
+  background: #090b0d;
+  color: #ffffff;
+}
+
+.programme {
+  padding: 3rem 0 4rem;
+  border-bottom: 6px solid #b08d2f;
+  border-radius: 0 0 18px 18px;
+}
+
+/* HERO */
+
+.hero {
+  max-width: 820px;
+  padding: 2rem 0 3rem;
+}
+
+.eyebrow {
+  margin: 0 0 0.75rem;
+  color: #b08d2f;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.title {
+  margin: 0;
+  font-size: clamp(2.4rem, 5vw, 4.5rem);
+  line-height: 1;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+}
+
+.description {
+  max-width: 700px;
+  margin: 1.25rem 0 0;
+  color: #b8bec7;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+/* SECTIONS */
+
+.section {
+  padding: 2.5rem 0;
+  border-top: 1px solid #262a30;
+}
+
+.sectionNumber {
+  margin: 0 0 0.5rem;
+  color: #e32636;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.section h2 {
+  margin: 0 0 1.5rem;
+  font-size: 1.65rem;
+}
+
+/* PROCESS */
+
+.process {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0.75rem;
+}
+
+.process span {
+  padding: 1rem;
+  background: #111111;
+  border: 1px solid #262a30;
+  border-radius: 8px;
+  color: #e5e7eb;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* PATHWAYS */
+
+.pathwayGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.pathwayCard {
+  padding: 1.5rem;
+  background: #111111;
+  border: 1px solid #262a30;
+  border-radius: 10px;
+}
+
+.pathwayCard h3 {
+  margin: 0 0 0.65rem;
+  color: #ffffff;
+  font-size: 1.05rem;
+}
+
+.pathwayCard p {
+  margin: 0;
+  color: #aeb4bd;
+  font-size: 0.92rem;
+  line-height: 1.65;
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+  .programme {
+    padding-top: 1.5rem;
+  }
+
+  .hero {
+    padding: 1.5rem 0 2.5rem;
+  }
+
+  .process {
+    grid-template-columns: 1fr;
+  }
+
+  .pathwayGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* INSTITUTIONAL PARTNERSHIPS */
+
+.partnershipBlock {
+  max-width: 760px;
+}
+
+.partnershipBlock p {
+  margin: 0 0 1rem;
+  color: #aeb4bd;
+  font-size: 0.92rem;
+  line-height: 1.7;
+}
+
+.partnershipLink {
+  display: inline-block;
+  margin-top: 0.5rem;
+  color: #b08d2f;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.partnershipLink:hover {
+  text-decoration: underline;
+}
