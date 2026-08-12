@@ -1,0 +1,104 @@
+.joinPage {
+  min-height: 100vh;
+  background: #090b0d;
+  color: #ffffff;
+}
+
+.joinPanel {
+  padding: 3rem 0 4rem;
+  border-bottom: 6px solid #b08d2f;
+  border-radius: 0 0 18px 18px;
+}
+
+.backLink {
+  display: inline-block;
+  margin-bottom: 2rem;
+  color: #b08d2f;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.hero {
+  max-width: 760px;
+  padding-bottom: 2.5rem;
+}
+
+.eyebrow {
+  margin: 0 0 0.75rem;
+  color: #b08d2f;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  line-height: 1;
+}
+
+.intro {
+  margin-top: 1.25rem;
+  color: #e5e7eb;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.section {
+  max-width: 760px;
+  padding: 2rem 0;
+  border-top: 1px solid #262a30;
+}
+
+.section p {
+  margin: 0 0 1rem;
+  color: #aeb4bd;
+  line-height: 1.75;
+}
+
+.contactCard {
+  max-width: 620px;
+  margin-top: 1rem;
+  padding: 1.5rem;
+  background: #111111;
+  border: 1px solid #262a30;
+  border-radius: 10px;
+}
+
+.label {
+  margin: 0;
+  color: #b08d2f;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.contactCard h2 {
+  margin: 0.5rem 0 1rem;
+  color: #ffffff;
+  font-size: 1.2rem;
+}
+
+.contactCard p {
+  margin: 0.5rem 0 0;
+  color: #aeb4bd;
+  line-height: 1.6;
+}
+
+.note {
+  max-width: 760px;
+  margin-top: 1.5rem;
+  color: #737b86;
+  font-size: 0.82rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 700px) {
+  .joinPanel {
+    padding: 2rem 0 3rem;
+    border-radius: 0 0 14px 14px;
+  }
+}

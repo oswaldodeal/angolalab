@@ -58,7 +58,13 @@ export default function HoldYouthPage() {
               <h2>How Hold-Youth Works</h2>
 
               <div className={styles.process}>
-                <span>Join</span>
+            <Link
+               href="/hold-youth/join"
+               className={styles.processLink}
+             >
+             Join
+            </Link>
+
                 <span>Choose a Pathway</span>
                 <span>Build a Project</span>
                 <span>Review</span>

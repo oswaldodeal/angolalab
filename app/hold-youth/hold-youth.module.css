@@ -154,3 +154,20 @@
 .partnershipLink:hover {
   text-decoration: underline;
 }
+
+.processLink {
+  display: block;
+  padding: 1rem;
+  color: #e5e7eb;
+  background: #111111;
+  border: 1px solid #262a30;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+}
+
+.processLink:hover {
+  border-color: #b08d2f;
+}
