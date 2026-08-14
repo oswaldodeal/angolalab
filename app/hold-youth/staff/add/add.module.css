@@ -1,0 +1,174 @@
+.addPage {
+  min-height: 100vh;
+  background: #090b0d;
+  color: #ffffff;
+}
+
+.panel {
+  padding: 3rem 0 4rem;
+  border-bottom: 6px solid #b08d2f;
+  border-radius: 0 0 18px 18px;
+}
+
+.backLink {
+  display: inline-block;
+  margin-bottom: 2rem;
+  color: #b08d2f;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.hero {
+  max-width: 760px;
+  padding-bottom: 2.5rem;
+}
+
+.eyebrow {
+  margin: 0 0 0.75rem;
+  color: #b08d2f;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  line-height: 1;
+}
+
+.hero > p:last-child {
+  margin-top: 1.25rem;
+  color: #aeb4bd;
+  line-height: 1.7;
+}
+
+.form {
+  max-width: 950px;
+}
+
+.formSection {
+  padding: 2rem 0;
+  border-top: 1px solid #262a30;
+}
+
+.sectionHeading {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.4rem;
+}
+
+.sectionHeading span {
+  color: #e32636;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+.sectionHeading h2 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.field > span {
+  color: #aeb4bd;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.field input,
+.field select,
+.field textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.8rem 0.9rem;
+
+  color: #ffffff;
+  background: #111111;
+
+  border: 1px solid #2d3035;
+  border-radius: 8px;
+
+  font: inherit;
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+  outline: none;
+  border-color: #b08d2f;
+}
+
+.field textarea {
+  resize: vertical;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1rem;
+  padding-top: 2rem;
+}
+
+.cancel {
+  color: #aeb4bd;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.actions button {
+  padding: 0.8rem 1.1rem;
+
+  color: #090b0d;
+  background: #b08d2f;
+
+  border: 0;
+  border-radius: 8px;
+
+  font-size: 0.9rem;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.actions button:hover {
+  background: #d4af37;
+}
+
+@media (max-width: 700px) {
+  .panel {
+    padding: 2rem 0 3rem;
+    border-radius: 0 0 14px 14px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .actions {
+    align-items: stretch;
+    flex-direction: column-reverse;
+  }
+
+  .actions button,
+  .cancel {
+    width: 100%;
+    text-align: center;
+  }
+}

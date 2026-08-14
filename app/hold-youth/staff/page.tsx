@@ -59,6 +59,7 @@ export default function HoldYouthStaffPage() {
                   }
                 </strong>
               </div>
+              
 
               <div>
                 <p>Enquiries</p>
@@ -78,6 +79,13 @@ export default function HoldYouthStaffPage() {
             </section>
 
             <section className={styles.section}>
+
+              <Link
+  href="/hold-youth/staff/add"
+  className={styles.addStudentLink}
+>
+  + Add Student
+</Link>
               <div className={styles.sectionHeader}>
                 <div>
                   <p className={styles.sectionNumber}>01</p>

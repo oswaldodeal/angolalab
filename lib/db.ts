@@ -59,6 +59,7 @@ CREATE TABLE IF NOT EXISTS hold_youth_students (
   next_of_kin_email TEXT,
 
   city TEXT NOT NULL,
+  accessed_by TEXT NOT NULL,
 
   pathway TEXT NOT NULL
     CHECK (
