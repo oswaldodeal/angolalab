@@ -1,0 +1,218 @@
+.staffPage {
+  min-height: 100vh;
+  background: #090b0d;
+  color: #ffffff;
+}
+
+.dashboard {
+  padding: 3rem 0 4rem;
+  border-bottom: 6px solid #b08d2f;
+  border-radius: 0 0 18px 18px;
+}
+
+.hero {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 2rem;
+  padding-bottom: 2.5rem;
+}
+
+.eyebrow {
+  margin: 0 0 0.75rem;
+  color: #b08d2f;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  line-height: 1;
+}
+
+.description {
+  max-width: 700px;
+  margin-top: 1.25rem;
+  color: #aeb4bd;
+  line-height: 1.7;
+}
+
+.backLink {
+  color: #b08d2f;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.summary {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  overflow: hidden;
+  background: #111111;
+  border: 1px solid #262a30;
+  border-radius: 10px;
+}
+
+.summary > div {
+  padding: 1.25rem;
+  border-right: 1px solid #262a30;
+}
+
+.summary > div:last-child {
+  border-right: 0;
+}
+
+.summary p {
+  margin: 0;
+  color: #8f97a2;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.summary strong {
+  display: block;
+  margin-top: 0.5rem;
+  color: #ffffff;
+  font-size: 1.1rem;
+}
+
+.section {
+  margin-top: 3rem;
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 2rem;
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid #7a621f;
+}
+
+.sectionNumber {
+  margin: 0;
+  color: #e32636;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+.sectionHeader h2 {
+  margin: 0.25rem 0 0;
+}
+
+.sectionHeader > p {
+  margin: 0;
+  color: #8f97a2;
+  font-size: 0.85rem;
+}
+
+.studentList {
+  margin-top: 1.25rem;
+}
+
+.studentRow {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 0.75fr 0.75fr;
+  gap: 1rem;
+  padding: 1.15rem;
+  background: #111111;
+  border: 1px solid #262a30;
+  border-bottom: 0;
+}
+
+.studentRow:first-child {
+  border-radius: 10px 10px 0 0;
+}
+
+.studentRow:last-child {
+  border-bottom: 1px solid #262a30;
+  border-radius: 0 0 10px 10px;
+}
+
+.studentRow h3,
+.studentRow p {
+  margin: 0;
+}
+
+.studentId {
+  color: #b08d2f;
+  font-family: monospace;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.studentRow h3 {
+  margin-top: 0.35rem;
+  font-size: 1rem;
+}
+
+.label {
+  color: #8f97a2;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.label + p {
+  margin-top: 0.35rem;
+}
+
+.status {
+  color: #b08d2f;
+  font-weight: 700;
+}
+
+.emptyState {
+  margin-top: 1.25rem;
+  padding: 2rem;
+  color: #8f97a2;
+  background: #111111;
+  border: 1px solid #262a30;
+  border-radius: 10px;
+  text-align: center;
+}
+
+@media (max-width: 800px) {
+  .summary {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .studentRow {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .dashboard {
+    padding: 2rem 0 3rem;
+  }
+
+  .hero,
+  .sectionHeader {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .summary {
+    grid-template-columns: 1fr;
+  }
+
+  .summary > div {
+    border-right: 0;
+    border-bottom: 1px solid #262a30;
+  }
+
+  .summary > div:last-child {
+    border-bottom: 0;
+  }
+
+  .studentRow {
+    grid-template-columns: 1fr;
+  }
+}
