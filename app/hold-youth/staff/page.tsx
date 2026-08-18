@@ -129,12 +129,17 @@ function StudentRow({
   return (
     <article className={styles.studentRow}>
       <div>
-        <p className={styles.studentId}>
-          HY-{String(student.id).padStart(4, "0")}
-        </p>
+  <Link
+    href={`/hold-youth/staff/students/${student.id}`}
+    className={styles.studentLink}
+  >
+    <p className={styles.studentId}>
+      HY-{String(student.id).padStart(4, "0")}
+    </p>
 
-        <h3>{student.full_name}</h3>
-      </div>
+    <h3>{student.full_name}</h3>
+  </Link>
+</div>
 
       <div>
         <p className={styles.label}>Pathway</p>
