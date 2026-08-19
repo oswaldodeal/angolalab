@@ -16,7 +16,6 @@ export type HoldYouthStudent = {
   id: number;
   full_name: string;
   date_of_birth: string;
-  age_group: string | null;
 
   contact_name: string;
   contact_email: string | null;
@@ -62,7 +61,6 @@ export function getHoldYouthStudentById(id: number) {
 export type CreateHoldYouthStudentInput = {
   full_name: string;
   date_of_birth: string;
-  age_group: string | null;
 
   contact_name: string;
   contact_email: string | null;
@@ -89,7 +87,7 @@ export function createHoldYouthStudent(
     INSERT INTO hold_youth_students (
       full_name,
       date_of_birth,
-      age_group,
+      
       contact_name,
       contact_email,
       contact_phone,
@@ -107,7 +105,6 @@ export function createHoldYouthStudent(
     VALUES (
       @full_name,
       @date_of_birth,
-      @age_group,
       @contact_name,
       @contact_email,
       @contact_phone,

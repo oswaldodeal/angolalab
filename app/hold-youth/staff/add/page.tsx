@@ -27,8 +27,7 @@ export default function AddHoldYouthStudentPage() {
         formData.get("date_of_birth") || ""
       ),
 
-      age_group:
-        String(formData.get("age_group") || "").trim() || null,
+      
 
       contact_name: String(
         formData.get("contact_name") || ""
@@ -126,11 +125,7 @@ accessed_by: String(
                     required
                   />
 
-                  <Field
-                    label="Age Group"
-                    name="age_group"
-                    placeholder="e.g. Youth"
-                  />
+                  
                 </div>
               </section>
 

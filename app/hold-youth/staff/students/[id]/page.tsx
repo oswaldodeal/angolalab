@@ -83,10 +83,7 @@ export default async function StudentRecordPage({
                 value={student.date_of_birth}
               />
 
-              <RecordField
-                label="Age Group"
-                value={student.age_group}
-              />
+              
             </RecordSection>
 
             <RecordSection number="02" title="Contact">
