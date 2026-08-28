@@ -87,7 +87,6 @@ export function createHoldYouthStudent(
     INSERT INTO hold_youth_students (
       full_name,
       date_of_birth,
-      
       contact_name,
       contact_email,
       contact_phone,
@@ -127,3 +126,32 @@ export function createHoldYouthStudent(
     Number(result.lastInsertRowid)
   );
 }
+
+db.exec(`
+CREATE TABLE IF NOT EXISTS hold_youth_staff (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+
+  full_name TEXT NOT NULL,
+  email TEXT NOT NULL UNIQUE,
+  password_hash TEXT NOT NULL,
+
+  role TEXT NOT NULL DEFAULT 'staff'
+    CHECK (
+      role IN (
+        'staff',
+        'administrator'
+      )
+    ),
+
+  status TEXT NOT NULL DEFAULT 'active'
+    CHECK (
+      status IN (
+        'active',
+        'inactive'
+      )
+    ),
+
+  created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+  updated_at DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+`);

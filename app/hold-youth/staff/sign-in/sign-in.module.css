@@ -1,0 +1,145 @@
+.signInPage {
+  min-height: 100vh;
+  background: #090b0d;
+  color: #ffffff;
+}
+
+.panel {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding: 4rem 0 5rem;
+  border-bottom: 6px solid #b08d2f;
+  border-radius: 0 0 18px 18px;
+}
+
+.signInCard {
+  width: 100%;
+  max-width: 480px;
+  padding: 2rem;
+
+  background: #111111;
+  border: 1px solid #262a30;
+  border-radius: 12px;
+}
+
+.backLink {
+  position: absolute;
+  left: 0;
+
+  color: #b08d2f;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.eyebrow {
+  margin: 0 0 0.75rem;
+
+  color: #b08d2f;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.signInCard h1 {
+  margin: 0;
+
+  font-size: clamp(2.2rem, 5vw, 3.2rem);
+  line-height: 1;
+}
+
+.description {
+  margin-top: 1.25rem;
+
+  color: #aeb4bd;
+  line-height: 1.7;
+}
+
+.securityNotice {
+  margin-top: 2rem;
+  padding: 1rem;
+
+  color: #b08d2f;
+  background: #090b0d;
+
+  border: 1px solid #262a30;
+  border-radius: 8px;
+
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.developmentNote {
+  margin: 1rem 0 0;
+
+  color: #737b86;
+  font-size: 0.82rem;
+}
+
+@media (max-width: 700px) {
+  .panel {
+    padding: 2.5rem 0 3rem;
+  }
+
+  .signInCard {
+    padding: 1.5rem;
+  }
+  .form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.field span {
+  color: #aeb4bd;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.field input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.85rem 0.9rem;
+
+  color: #ffffff;
+  background: #090b0d;
+
+  border: 1px solid #2d3035;
+  border-radius: 8px;
+
+  font: inherit;
+}
+
+.field input:focus {
+  outline: none;
+  border-color: #b08d2f;
+}
+
+.form button {
+  margin-top: 0.5rem;
+  padding: 0.85rem 1rem;
+
+  color: #090b0d;
+  background: #b08d2f;
+
+  border: 0;
+  border-radius: 8px;
+
+  font-size: 0.9rem;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.form button:hover {
+  background: #d4af37;
+}
+}
