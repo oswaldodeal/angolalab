@@ -9,7 +9,7 @@ import {
   type HoldYouthStudent,
 } from "@/lib/hold-youth/students";
 
-import styles from "./staff.module.css";
+import styles from "../staff.module.css";
 
 export default function HoldYouthStaffPage() {
   const students = getHoldYouthStudents();
@@ -39,7 +39,7 @@ export default function HoldYouthStaffPage() {
                 href="/hold-youth"
                 className={styles.backLink}
               >
-                ← Hold-Youth
+                Hold-Youth
               </Link>
             </header>
 

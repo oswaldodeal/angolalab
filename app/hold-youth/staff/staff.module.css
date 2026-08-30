@@ -239,4 +239,14 @@
 .studentLink:hover h3 {
   color: #b08d2f;
 }
+
+.errorMessage {
+  margin: 0 0 1rem;
+  padding: 0.85rem 1rem;
+  border: 1px solid #7a2f2f;
+  border-radius: 8px;
+  background: #1a0d0d;
+  color: #f3c7c7;
+  font-size: 0.95rem;
+}
 }
