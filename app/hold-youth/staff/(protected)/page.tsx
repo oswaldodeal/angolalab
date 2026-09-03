@@ -1,5 +1,5 @@
 import Link from "next/link";
-
+import { signOut } from "@/auth";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import PageContainer from "@/components/PageContainer";
@@ -80,15 +80,40 @@ export default function HoldYouthStaffPage() {
 
             <section className={styles.section}>
 
-              <Link
-  href="/hold-youth/staff/add"
-  className={styles.addStudentLink}
->
-  + Add Student
-</Link>
+              <div className={styles.staffActions}>
+  <Link
+    href="/hold-youth/staff/add"
+    className={styles.addStudentLink}
+  >
+    + Add Student
+  </Link>
+
+  <form
+    action={async () => {
+      "use server";
+
+      await signOut({
+        redirectTo: "/hold-youth/staff/sign-in",
+      });
+    }}
+    className={styles.signOutForm}
+  >
+    <button
+      type="submit"
+      className={styles.signOutButton}
+    >
+      Sign Out
+    </button>
+  </form>
+</div>
+
+
+
+
+
               <div className={styles.sectionHeader}>
                 <div>
-                  <p className={styles.sectionNumber}>01</p>
+          
                   <h2>Student Register</h2>
                 </div>
 
