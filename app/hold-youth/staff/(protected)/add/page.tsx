@@ -1,3 +1,4 @@
+import { auth } from "@/auth";
 import Link from "next/link";
 import { redirect } from "next/navigation";
 import { revalidatePath } from "next/cache";
@@ -20,7 +21,13 @@ export default function AddHoldYouthStudentPage() {
 
     const pathway = formData.get("pathway") as HoldYouthPathway;
     const status = formData.get("status") as HoldYouthStudentStatus;
+    const session = await auth();
 
+if (!session?.user?.name) {
+  throw new Error(
+    "Authenticated staff identity is required."
+  );
+}
     createHoldYouthStudent({
       full_name: String(formData.get("full_name") || "").trim(),
       date_of_birth: String(
@@ -62,15 +69,12 @@ export default function AddHoldYouthStudentPage() {
       pathway,
       status,
 
-      joined_date:
-  String(formData.get("joined_date") || "") || null,
+  joined_date: new Date().toISOString().split("T")[0],
 
 notes:
   String(formData.get("notes") || "").trim() || null,
 
-accessed_by: String(
-  formData.get("accessed_by") || ""
-).trim(),
+accessed_by: session.user.name,
     });
 
     revalidatePath("/hold-youth/staff");
@@ -251,11 +255,7 @@ accessed_by: String(
                     </select>
                   </label>
 
-                  <Field
-                    label="Joined Date"
-                    name="joined_date"
-                    type="date"
-                  />
+                  
                 </div>
               </section>
 
@@ -264,16 +264,7 @@ accessed_by: String(
                   <span>05</span>
                   <h2>Internal Notes</h2>
 
-                  <label className={styles.field}>
-  <span>Accessed By</span>
-
-  <input
-    name="accessed_by"
-    type="text"
-    placeholder="Staff member name"
-    required
-  />
-</label>
+                  
                 </div>
 
                 <label className={styles.field}>

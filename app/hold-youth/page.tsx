@@ -88,33 +88,76 @@ export default function HoldYouthPage() {
                 ))}
               </div>
             </section>
+  
 
-            <section className={styles.section}>
-  <p className={styles.sectionNumber}>03</p>
+{/* 06 — Institutional Partnerships */}
+<section
+  className={`${styles.section} ${styles.partnershipSection}`}
+>
+  <div className={styles.sectionHeader}>
+    <span className={styles.sectionNumber}>03</span>
 
-  <h2>Institutional Partnerships</h2>
+    <div>
+      <h2>Institutional Partnerships</h2>
 
-  <div className={styles.partnershipBlock}>
-    <p>
-      Hold-Youth works with educational institutions, businesses
-      and community organisations to establish the resources,
-      expertise and environments required to support practical
-      youth development.
-    </p>
-
-    <p>
-      Partnerships are developed around the needs of the programme
-      and the communities in which Hold-Youth operates.
-    </p>
-
-    <Link
-      href="/contact"
-      className={styles.partnershipLink}
-    >
-      Interested in supporting Hold-Youth? Contact AngolaLab →
-    </Link>
+      <p>
+        Supporting independent research, education and
+        institutional development.
+      </p>
+    </div>
   </div>
+
+  <div className={styles.partnershipGrid}>
+    <article className={styles.partnershipCard}>
+      <h3>Education Partner</h3>
+
+      <p>
+        Reserved for future collaboration with universities,
+        colleges, training providers and educational institutions
+        supporting learning and skills development.
+      </p>
+
+      <span className={styles.partnershipCategory}>
+        Education
+      </span>
+    </article>
+
+    <article className={styles.partnershipCard}>
+      <h3>Research Institution</h3>
+
+      <p>
+        Reserved for future collaboration with universities,
+        research centres and organisations contributing to
+        independent research and knowledge development.
+      </p>
+
+      <span className={styles.partnershipCategory}>
+        Research
+      </span>
+    </article>
+
+    <article className={styles.partnershipCard}>
+      <h3>Industry Partner</h3>
+
+      <p>
+        Reserved for future collaboration with companies and
+        organisations providing practical experience, technical
+        learning and pathways into real-world opportunities.
+      </p>
+
+      <span className={styles.partnershipCategory}>
+        Industry
+      </span>
+    </article>
+  </div>
+
+  <p className={styles.partnershipNote}>
+    Partnership framework under development. Organisations shown
+    here in the future will represent established or developing
+    collaboration rather than promotional endorsement.
+  </p>
 </section>
+   
           </section>
         </PageContainer>
       </main>

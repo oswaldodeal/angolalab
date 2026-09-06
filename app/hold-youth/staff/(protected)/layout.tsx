@@ -11,6 +11,7 @@ export default async function ProtectedStaffLayout({
   if (!session?.user) {
     redirect("/hold-youth/staff/sign-in");
   }
+  
 
   return <>{children}</>;
 }
